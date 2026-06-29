@@ -21,11 +21,9 @@
       <p><a href="tel:+94112871891">+94-11-2871891</a></p>
       <p><a href="tel:+94112074200">+94-11-2074200</a></p>
       <p><a href="mailto:asdaengineeringac@gmail.com">asdaengineeringac@gmail.com</a></p>
-      <ul class="check-list">
-        <li>ISO 9001:2015 Certified</li>
-        <li>ICTAD EM 2 Registered</li>
-        <li>Established in 2002</li>
-      </ul>
+      <div style="margin-top: 1.5rem; border-radius: 8px; overflow: hidden;">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6555.028349450865!2d79.91400767674429!3d6.906520618590264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae259fdb4ec7bc5%3A0x6cc3003ef326eaf5!2sASDA%20Engineering%20(Pvt)%20Ltd!5e1!3m2!1sen!2slk!4v1782753067072!5m2!1sen!2slk" width="100%" height="300" style="border:0; display: block;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+      </div>
     </aside>
 
     <form class="contact-panel">

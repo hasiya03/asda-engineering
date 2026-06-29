@@ -119,6 +119,7 @@ a {
 }
 
 .nav-links a {
+  position: relative;
   padding: 10px 14px;
   border-radius: 6px;
   color: #1f2937;
@@ -134,7 +135,19 @@ a {
 
 .nav-links a.active {
   color: var(--brand);
-  background: rgba(10, 125, 60, 0.1);
+  background: transparent;
+}
+
+.nav-links a.active::after {
+  content: "";
+  position: absolute;
+  bottom: 4px;
+  left: 14px;
+  right: 14px;
+  height: 3px;
+  background: var(--brand);
+  border-radius: 3px;
+  box-shadow: 0 0 10px rgba(10, 125, 60, 0.6);
 }
 
 .nav-toggle {
@@ -450,8 +463,9 @@ a {
 }
 
 .icon-box {
-  display: inline-grid;
-  place-items: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   width: 46px;
   height: 46px;
   margin-bottom: 18px;
@@ -459,6 +473,10 @@ a {
   color: var(--white);
   background: var(--brand);
   font-weight: 900;
+}
+
+.icon-box svg {
+  display: block;
 }
 
 .card p,
@@ -696,7 +714,7 @@ label {
   gap: 7px;
   color: #1f2937;
   font-size: 0.9rem;
-  font-weight: 800;
+  font-weight: normal;
 }
 
 input,
@@ -1008,7 +1026,7 @@ textarea {
   background: transparent;
   border: none;
   font-size: 1.1rem;
-  font-weight: 800;
+  font-weight: normal;
   color: var(--ink);
   cursor: pointer;
   font-family: inherit;

@@ -5,12 +5,12 @@
   import { siteRevealed } from '../store.js';
 
   const services = [
-    ['01', 'MVAC Systems', 'Air conditioning, ventilation, chilled water systems, FCUs, and related mechanical services.'],
-    ['02', 'Plumbing & Sanitary Drainage', 'Water supply, sanitary drainage, and plumbing systems for demanding building environments.'],
-    ['03', 'Electrical & Lighting', 'High-quality lighting systems, electrical infrastructure, and building-services installations.'],
-    ['04', 'Fire Protection', 'Fire detection and protection systems designed for safer, more compliant built environments.'],
-    ['05', 'Steel Fabrication', 'Workshop-supported steel fabrication for project-specific mechanical and site requirements.'],
-    ['06', 'Testing & Commissioning', 'Air testing, hydro testing, balancing, performance validation, and final commissioning.']
+    ['<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"/></svg>', 'MVAC Systems', 'Air conditioning, ventilation, chilled water systems, FCUs, and related mechanical services.'],
+    ['<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></svg>', 'Plumbing & Sanitary Drainage', 'Water supply, sanitary drainage, and plumbing systems for demanding building environments.'],
+    ['<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>', 'Electrical & Lighting', 'High-quality lighting systems, electrical infrastructure, and building-services installations.'],
+    ['<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>', 'Fire Protection', 'Fire detection and protection systems designed for safer, more compliant built environments.'],
+    ['<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 12-8.5 8.5c-.83.83-2.17.83-3 0 0 0 0 0 0 0a2.12 2.12 0 0 1 0-3L12 9"/><path d="M17.64 15 22 10.64"/><path d="m20.91 11.7-1.25-1.25c-.6-.6-.93-1.4-.93-2.25v-.86L16.01 4.6a5.56 5.56 0 0 0-3.94-1.64H11.2C10.4 2.96 9 2.96 9 2.96c0 0 0 1.4.96 2.2h.86c.85 0 1.65.33 2.25.93l1.25 1.25"/><path d="m11.23 8.78.47.47"/></svg>', 'Steel Fabrication', 'Workshop-supported steel fabrication for project-specific mechanical and site requirements.'],
+    ['<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/><path d="m9 14 2 2 4-4"/></svg>', 'Testing & Commissioning', 'Air testing, hydro testing, balancing, performance validation, and final commissioning.']
   ];
 
   const projects = [
@@ -205,7 +205,20 @@
     <img src="/assets/who_are_we1.jpg.jpeg" alt="ASDA Engineering team and project environment" />
     <div>
     
-      <h2>Reliable engineering. Responsive service. Long-term partnerships.</h2>
+      <ul style="list-style: none; padding: 0; display: grid; gap: 16px; margin-bottom: 1.5rem;">
+        <li style="display: flex; align-items: center; gap: 12px; font-size: 1.4rem; font-weight: 800; color: var(--ink);">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          Reliable engineering.
+        </li>
+        <li style="display: flex; align-items: center; gap: 12px; font-size: 1.4rem; font-weight: 800; color: var(--ink);">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          Responsive service.
+        </li>
+        <li style="display: flex; align-items: center; gap: 12px; font-size: 1.4rem; font-weight: 800; color: var(--ink);">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          Long-term partnerships.
+        </li>
+      </ul>
       <p>
         Since 2002, ASDA Engineering has built a strong reputation as a trusted MEP
         engineering contractor. We approach every project with a focus on long-term
@@ -232,7 +245,7 @@
   <div class="grid three">
     {#each services as service}
       <article class="card">
-        <span class="icon-box">{service[0]}</span>
+        <span class="icon-box">{@html service[0]}</span>
         <h3>{service[1]}</h3>
         <p>{service[2]}</p>
       </article>

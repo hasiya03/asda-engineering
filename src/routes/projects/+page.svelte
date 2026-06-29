@@ -81,7 +81,7 @@
 </script>
 
 <section class="page-hero">
-  <div class="section">
+  <div class="section" style="grid-template-columns: 1fr;">
     <div>
  
       <h1 style="font-size: clamp(2.5rem, 5vw, 4rem); line-height: 1.1; margin-bottom: 1rem;">Portfolio of major MEP work across Sri Lanka.</h1>
