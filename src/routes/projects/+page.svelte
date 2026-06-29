@@ -1,6 +1,17 @@
 <script>
   const projectGroups = [
     {
+      title: 'Ongoing Projects',
+      projects: [
+        ['International Conference Hall Nikanda', 'MEP - Rs. 550 million', '/assets/project location image/International Conference Hall Nikanda.png'],
+        ['Examination Department Pallawatte', 'AC System - Rs. 40 million', '/assets/project location image/Examination Department Pallawatte.jpg'],
+        ['Abewella & Pattipola Farm Project', 'Plumbing - Rs. 226 million', '/assets/project location image/AMBEWELLA PATTIPOLA FARM.jpg'],
+        ['Mr. Dinesh Rodrigo Office Complex', 'MEP - Rs. 148 million', '/assets/project location image/Mr. Dinesh Rodrigo Office Complex.jpg'],
+        ['Taru Villa Hotel Bentota', 'MEP - Rs. 83 million & 30KW Solar', '/assets/project location image/Taru Villa Hotel Bentota.jpg'],
+        ['15 Nos House Units', '5KW each Solar System', '/assets/project location image/15 NOS.jpg']
+      ]
+    },
+    {
       title: 'Hospitality & Commercial',
       projects: [
         ['Kingsbury Hotel, Colombo', '412 TR Chiller, 255 FCUs', '/assets/project%20location%20image/Kingsbury-Hotel.jpg.jpeg'],
@@ -20,17 +31,6 @@
         ['General Hospital, Hambantota', 'Healthcare MEP works', '/assets/project%20location%20image/generl-hospital-hambantota.jpg.jpeg'],
         ['Cancer Hospital, Maharagama', 'Healthcare engineering works', '/assets/project%20location%20image/Cancer-Hospital-maharagma.jpg.jpeg'],
         ['Hemas Hospital, Wattala', '456 TR capacity', '/assets/project%20location%20image/Hemas-Hospital-wattala.jpg.jpeg']
-      ]
-    },
-    {
-      title: 'Ongoing Projects',
-      projects: [
-        ['International Conference Hall Nikanda', 'MEP - Rs. 550 million', '/assets/project location image/International Conference Hall Nikanda.png'],
-        ['Examination Department Pallawatte', 'AC System - Rs. 40 million', '/assets/project location image/Examination Department Pallawatte.jpg'],
-        ['Abewella & Pattipola Farm Project', 'Plumbing - Rs. 226 million', '/assets/project location image/AMBEWELLA PATTIPOLA FARM.jpg'],
-        ['Mr. Dinesh Rodrigo Office Complex', 'MEP - Rs. 148 million', '/assets/project location image/Mr. Dinesh Rodrigo Office Complex.jpg'],
-        ['Taru Villa Hotel Bentota', 'MEP - Rs. 83 million & 30KW Solar', '/assets/project location image/Taru Villa Hotel Bentota.jpg'],
-        ['15 Nos House Units', '5KW each Solar System', '/assets/project location image/15 NOS.jpg']
       ]
     }
   ];
@@ -98,13 +98,10 @@
   <section class="section">
     <div class="section-header">
       <div>
-        <p class="eyebrow">Portfolio</p>
+       
         <h2>{group.title}</h2>
       </div>
-      <p>
-        Representative ASDA Engineering projects organized by sector and delivery type for
-        easier review.
-      </p>
+      
     </div>
     <div class="grid three">
       {#each group.projects as project}
@@ -119,6 +116,23 @@
       {/each}
     </div>
   </section>
+
+  {#if group.title === 'Ongoing Projects'}
+    <section class="vr-section section highlighted-vr">
+      <div class="section-header center">
+        <h2>Experience Our Project: Ministry of Health Sri Lanka</h2>
+        <p class="highlight-text">Explore an immersive 3D view of the ASDA Engineering Ministry of Health (MOH) chiller room installation. <strong>Click and drag below to experience it!</strong></p>
+      </div>
+      <div class="vr-container-custom">
+        <iframe 
+          src="https://view.berl.dev/viewer?scene=chillerroom_asda" 
+          title="Interactive VR Chiller Room"
+          allowfullscreen
+          class="vr-iframe"
+        ></iframe>
+      </div>
+    </section>
+  {/if}
 {/each}
 
 <section class="soft-band faq-section">
@@ -165,6 +179,65 @@
   @media (max-width: 768px) {
     .client-list {
       column-count: 1;
+    }
+  }
+
+  /* VR Section Highlights */
+  .highlighted-vr {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 3rem 1rem;
+    margin: 4rem auto;
+    max-width: 800px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    position: relative;
+  }
+  
+  .highlighted-vr::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #007bff, transparent);
+  }
+
+  .highlight-text strong {
+    color: #007bff;
+    font-weight: 600;
+    display: block;
+    margin-top: 0.8rem;
+    font-size: 1.1em;
+  }
+
+  .vr-container-custom {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    width: 100%;
+    height: 400px;
+    position: relative;
+    display: block;
+  }
+
+  .vr-iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+  }
+
+  @media (max-width: 768px) {
+    .highlighted-vr {
+      padding: 1.5rem;
+      margin: 2rem 1rem;
+      border-radius: 24px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .vr-container-custom {
+      height: 65vh;
+      border-radius: 16px;
     }
   }
 </style>

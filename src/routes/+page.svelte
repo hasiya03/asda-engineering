@@ -132,24 +132,11 @@
   </div>
 </section>
 
-<section class="vr-section section">
-  <div class="section-header center">
-    <h2>Experience Our Projects </h2>
-    <p>Explore an immersive 3D view of the ASDA Engineering MOH chiller room installation. Click and drag to look around the environment.</p>
-  </div>
-  <div class="vr-container">
-    <iframe 
-      src="https://view.berl.dev/viewer?scene=chillerroom_asda" 
-      title="Interactive VR Chiller Room"
-      allowfullscreen
-    ></iframe>
-  </div>
-</section>
 
 <section class="trusted-carousel-section" aria-label="Trusted clients and project partners">
   <div class="trusted-heading">
-    <p class="eyebrow">Trusted by</p>
-    <h2>Selected clients and project partners.</h2>
+    
+    <h2>Clients and project partners.</h2>
   </div>
   <div class="logo-carousel" aria-hidden="true">
     <div class="logo-track">
@@ -239,10 +226,7 @@
    
       <h2>Complete MEP capability under one engineering partner.</h2>
     </div>
-    <p>
-      From mechanical plant rooms to final commissioning, ASDA Engineering coordinates the
-      systems that keep buildings efficient, compliant, and ready for operation.
-    </p>
+    
   </div>
 
   <div class="grid three">

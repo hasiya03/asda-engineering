@@ -39,7 +39,7 @@
   <div class="section split">
     <img src="/assets/History1.jpg.jpeg" alt="ASDA Engineering workshop facility" />
     <div>
-      <p class="eyebrow">Delivery capability</p>
+   
       <h2>Structured to support demanding building-services projects.</h2>
       <p>
         With owned plant equipment, a fully equipped workshop, trained technical staff, and a

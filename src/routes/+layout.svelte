@@ -80,11 +80,6 @@
 
 <div class="site-wrapper" class:revealed={$siteRevealed}>
 <header class="site-header">
-  <div class="top-strip">
-    <span>ISO 9001:2015 Certified</span>
-    <span>ICTAD EM 2 Registered</span>
-    <span>Established 2002</span>
-  </div>
 
   <nav class="nav-shell" aria-label="Main navigation">
     <a class="brand" href="/" aria-label="ASDA Engineering home" on:click={closeNav}>
