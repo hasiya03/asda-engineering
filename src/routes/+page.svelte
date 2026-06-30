@@ -49,6 +49,24 @@
 
   const carouselLogos = [...clientLogos, ...clientLogos];
 
+  const heroRow1 = [
+    { class: 'img-1', src: '/assets/project%20location%20image/Kingsbury-Hotel.jpg.jpeg' },
+    { class: 'img-2', src: '/assets/project%20location%20image/Army-Hospital-Narahenpita.jpg.jpeg' },
+    { class: 'img-3', src: '/assets/project%20location%20image/srilanka-insuarance.jpg.jpeg' },
+    { class: 'img-4', src: '/assets/project location image/15 NOS.jpg' },
+  ];
+  const heroRow2 = [
+    { class: 'img-5', src: '/assets/project location image/Tangerine-kalutara.jpg.jpeg' },
+    { class: 'img-6', src: '/assets/project location image/Japanese Embassy House Project.jpg' },
+    { class: 'img-7', src: '/assets/project location image/Examination Department Pallawatte.jpg' },
+    { class: 'img-8', src: '/assets/project location image/Taru Villa Hotel Bentota.jpg' },
+  ];
+  const heroRow3 = [
+    { class: 'img-9', src: '/assets/project location image/Mr. Dinesh Rodrigo Office Complex.jpg' },
+    { class: 'img-10', src: '/assets/project location image/AMBEWELLA PATTIPOLA FARM.jpg' },
+    { class: 'img-11', src: '/assets/project location image/World Trade Centre, Colombo.webp' },
+  ];
+
   const faqs = [
     {
       question: "What areas of Sri Lanka do you operate in?",
@@ -87,13 +105,11 @@
 <section class="modern-hero">
   <div class="modern-hero-content">
     <h1 class="modern-title">
-      Mechanical, Electrical <br/>
-      Plumbing Engineers
+      Engineered to Run Flawlessly.<br/>
+      Built to Last.
     </h1>
     <p class="modern-lead">
-      ASDA Engineering delivers consultancy, design, building, installation, testing,
-      balancing, and commissioning services for mechanical, electrical, and plumbing systems
-      across Sri Lanka.
+      Don't let poorly designed systems derail your operations. We provide expert consultancy, installation, and balancing for MEP systems across Sri Lanka, ensuring your building runs at peak efficiency from day one.
     </p>
 
     <div class="modern-stats">
@@ -118,17 +134,36 @@
   </div>
 
   <div class="floating-images">
-    <img class="float-img img-1" src="/assets/project%20location%20image/Kingsbury-Hotel.jpg.jpeg" alt="" />
-    <img class="float-img img-2" src="/assets/project%20location%20image/Army-Hospital-Narahenpita.jpg.jpeg" alt="" />
-    <img class="float-img img-3" src="/assets/project%20location%20image/srilanka-insuarance.jpg.jpeg" alt="" />
-    <img class="float-img img-4" src="/assets/project location image/15 NOS.jpg" alt="" />
-    <img class="float-img img-5" src="/assets/project location image/Tangerine-kalutara.jpg.jpeg" alt="" />
-    <img class="float-img img-6" src="/assets/project location image/Japanese Embassy House Project.jpg" alt="" />
-    <img class="float-img img-7" src="/assets/project location image/Examination Department Pallawatte.jpg" alt="" />
-    <img class="float-img img-8" src="/assets/project location image/Taru Villa Hotel Bentota.jpg" alt="" />
-    <img class="float-img img-9" src="/assets/project location image/Mr. Dinesh Rodrigo Office Complex.jpg" alt="" />
-    <img class="float-img img-10" src="/assets/project location image/AMBEWELLA PATTIPOLA FARM.jpg" alt="" />
-    <img class="float-img img-11" src="/assets/project location image/World Trade Centre, Colombo.webp" alt="" />
+    <div class="hero-row">
+      <div class="hero-track">
+        {#each heroRow1 as img}
+          <img class="float-img {img.class}" src={img.src} alt="" />
+        {/each}
+        {#each heroRow1 as img}
+          <img class="float-img {img.class} duplicate" src={img.src} alt="" aria-hidden="true" />
+        {/each}
+      </div>
+    </div>
+    <div class="hero-row">
+      <div class="hero-track reverse">
+        {#each heroRow2 as img}
+          <img class="float-img {img.class}" src={img.src} alt="" />
+        {/each}
+        {#each heroRow2 as img}
+          <img class="float-img {img.class} duplicate" src={img.src} alt="" aria-hidden="true" />
+        {/each}
+      </div>
+    </div>
+    <div class="hero-row">
+      <div class="hero-track">
+        {#each heroRow3 as img}
+          <img class="float-img {img.class}" src={img.src} alt="" />
+        {/each}
+        {#each heroRow3 as img}
+          <img class="float-img {img.class} duplicate" src={img.src} alt="" aria-hidden="true" />
+        {/each}
+      </div>
+    </div>
   </div>
 </section>
 
@@ -150,24 +185,32 @@
 </section>
 
 <section class="soft-band">
-  <div class="section split">
-    <div>
-    
-      <h2>Practical delivery models for demanding projects.</h2>
-      <p>
-        ASDA Engineering provides viable solutions across traditional construction,
-        engineering procurement construction, partnering, and joint venture contracts. Our
-        strength lies in combining technical engineering knowledge with disciplined site
-        execution.
+  <div class="section" style="max-width: 1200px; margin: 0 auto;">
+    <div style="text-align: center; max-width: 800px; margin: 0 auto 3rem auto;">
+      <h2>Our Approach & Capabilities</h2>
+      <p style="font-size: 1.15rem; color: var(--muted); margin-bottom: 0;">
+        ASDA Engineering delivers comprehensive solutions across traditional construction, Engineering, Procurement, and Construction (EPC), partnering, and joint venture contracts. Our core strength lies in bridging the gap between advanced technical engineering and strictly disciplined on-site execution.
       </p>
-      <ul class="check-list">
-        <li>Consultancy, design, build, installation, and commissioning capability</li>
-        <li>Owned plant equipment and a fully equipped workshop facility</li>
-        <li>ISO-certified quality management and ICTAD EM 2 contractor status</li>
-        <li>Cost-conscious and responsive support across project stages</li>
-      </ul>
     </div>
-    <img src="/assets/History2.jpg.jpeg" alt="ASDA Engineering workshop and fabrication capability" />
+    
+    <div class="advantages-grid">
+      <article class="card">
+        <h4 style="font-size: 1.2rem; margin-bottom: 12px;">End-to-End Execution</h4>
+        <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 0;">Complete consultancy, design, build, installation, and commissioning capabilities.</p>
+      </article>
+      <article class="card">
+        <h4 style="font-size: 1.2rem; margin-bottom: 12px;">In-House Infrastructure</h4>
+        <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 0;">We maintain our own plant equipment and a fully equipped workshop facility, ensuring zero delays.</p>
+      </article>
+      <article class="card">
+        <h4 style="font-size: 1.2rem; margin-bottom: 12px;">Certified Excellence</h4>
+        <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 0;">Operating with ISO-certified quality management and proud ICTAD EM 2 contractor status.</p>
+      </article>
+      <article class="card">
+        <h4 style="font-size: 1.2rem; margin-bottom: 12px;">Reliable Support</h4>
+        <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 0;">Cost-conscious planning and highly responsive support across every single project stage.</p>
+      </article>
+    </div>
   </div>
 </section>
 
@@ -200,35 +243,41 @@
   </div>
 </section>
 
-<section class="soft-band">
-  <div class="section split">
-    <img src="/assets/who_are_we1.jpg.jpeg" alt="ASDA Engineering team and project environment" />
-    <div>
-    
-      <ul style="list-style: none; padding: 0; display: grid; gap: 16px; margin-bottom: 1.5rem;">
-        <li style="display: flex; align-items: center; gap: 12px; font-size: 1.4rem; font-weight: 800; color: var(--ink);">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          Reliable engineering.
-        </li>
-        <li style="display: flex; align-items: center; gap: 12px; font-size: 1.4rem; font-weight: 800; color: var(--ink);">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          Responsive service.
-        </li>
-        <li style="display: flex; align-items: center; gap: 12px; font-size: 1.4rem; font-weight: 800; color: var(--ink);">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          Long-term partnerships.
-        </li>
-      </ul>
-      <p>
-        Since 2002, ASDA Engineering has built a strong reputation as a trusted MEP
-        engineering contractor. We approach every project with a focus on long-term
-        relationships, rapid response, attentive service, and affordable project delivery.
-      </p>
-      <p>
-        Our repeat contracts with local contractors, councils, and state departments reflect
-        the confidence clients place in our technical capability, site discipline, and
-        commitment to completing work responsibly.
-      </p>
+<section class="points-section">
+  <div class="points-bg" style="background-image: url('/assets/who_are_we1.jpg.jpeg');"></div>
+  <div class="points-overlay"></div>
+  <div class="section" style="position: relative; z-index: 2;">
+    <div class="grid three points-grid">
+      <article class="card point-card">
+        <span class="point-icon"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg></span>
+        <h3>Over Two Decades of Experience</h3>
+        <p>Established in 2002, we bring a long-standing, strong reputation as a trusted MEP engineering contractor to every project.</p>
+      </article>
+      <article class="card point-card">
+        <span class="point-icon"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span>
+        <h3>Rapid & Responsive Service</h3>
+        <p>We prioritize rapid response times and attentive service, ensuring your project keeps moving without unnecessary delays.</p>
+      </article>
+      <article class="card point-card">
+        <span class="point-icon"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+        <h3>Focus on Long-Term Partnerships</h3>
+        <p>We aren't just looking for a single contract; we approach every project with the goal of building lasting, collaborative relationships.</p>
+      </article>
+      <article class="card point-card">
+        <span class="point-icon"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="2" x2="12" y2="22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span>
+        <h3>Cost-Effective Project Delivery</h3>
+        <p>High-quality engineering shouldn't break the budget. We are committed to delivering exceptional results at an affordable price point.</p>
+      </article>
+      <article class="card point-card">
+        <span class="point-icon"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></span>
+        <h3>Strict Site Discipline & Responsibility</h3>
+        <p>We operate with high technical capability and strict on-site discipline, guaranteeing that all work is completed safely and responsibly.</p>
+      </article>
+      <article class="card point-card">
+        <span class="point-icon"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></span>
+        <h3>Trusted by the Public & Private Sectors</h3>
+        <p>Our high rate of repeat contracts with local contractors, councils, and state departments proves the confidence clients place in our work.</p>
+      </article>
     </div>
   </div>
 </section>

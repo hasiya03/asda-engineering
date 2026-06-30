@@ -3,6 +3,7 @@
     {
       title: 'Ongoing Projects',
       projects: [
+        ['Ministry of Health Sri Lanka', 'Immersive 3D Chiller Room VR', 'https://view.berl.dev/viewer?scene=chillerroom_asda', true],
         ['International Conference Hall Nikanda', 'MEP - Rs. 550 million', '/assets/project location image/International Conference Hall Nikanda.png'],
         ['Examination Department Pallawatte', 'AC System - Rs. 40 million', '/assets/project location image/Examination Department Pallawatte.jpg'],
         ['Abewella & Pattipola Farm Project', 'Plumbing - Rs. 226 million', '/assets/project location image/AMBEWELLA PATTIPOLA FARM.jpg'],
@@ -106,7 +107,16 @@
     <div class="grid three">
       {#each group.projects as project}
         <article class="project-card">
-          <img src={project[2]} alt={project[0]} />
+          {#if project[3]}
+            <iframe 
+              src={project[2]} 
+              title="Interactive VR"
+              allowfullscreen
+              style="width: 100%; aspect-ratio: 16 / 10; border: none; display: block;"
+            ></iframe>
+          {:else}
+            <img src={project[2]} alt={project[0]} />
+          {/if}
           <div>
             <span>{group.title}</span>
             <h3>{project[0]}</h3>
@@ -117,22 +127,7 @@
     </div>
   </section>
 
-  {#if group.title === 'Ongoing Projects'}
-    <section class="vr-section section highlighted-vr">
-      <div class="section-header center">
-        <h2>Experience Our Project: Ministry of Health Sri Lanka</h2>
-        <p class="highlight-text">Explore an immersive 3D view of the ASDA Engineering Ministry of Health (MOH) chiller room installation. <strong>Click and drag below to experience it!</strong></p>
-      </div>
-      <div class="vr-container-custom">
-        <iframe 
-          src="https://view.berl.dev/viewer?scene=chillerroom_asda" 
-          title="Interactive VR Chiller Room"
-          allowfullscreen
-          class="vr-iframe"
-        ></iframe>
-      </div>
-    </section>
-  {/if}
+
 {/each}
 
 <section class="soft-band faq-section">
@@ -179,65 +174,6 @@
   @media (max-width: 768px) {
     .client-list {
       column-count: 1;
-    }
-  }
-
-  /* VR Section Highlights */
-  .highlighted-vr {
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 20px;
-    padding: 3rem 1rem;
-    margin: 4rem auto;
-    max-width: 800px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-    position: relative;
-  }
-  
-  .highlighted-vr::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0;
-    height: 3px;
-    background: linear-gradient(90deg, transparent, #007bff, transparent);
-  }
-
-  .highlight-text strong {
-    color: #007bff;
-    font-weight: 600;
-    display: block;
-    margin-top: 0.8rem;
-    font-size: 1.1em;
-  }
-
-  .vr-container-custom {
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
-    width: 100%;
-    height: 400px;
-    position: relative;
-    display: block;
-  }
-
-  .vr-iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-    display: block;
-  }
-
-  @media (max-width: 768px) {
-    .highlighted-vr {
-      padding: 1.5rem;
-      margin: 2rem 1rem;
-      border-radius: 24px;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-    }
-    
-    .vr-container-custom {
-      height: 65vh;
-      border-radius: 16px;
     }
   }
 </style>

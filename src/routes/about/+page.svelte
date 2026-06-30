@@ -56,7 +56,7 @@
 </script>
 
 <section class="page-hero">
-  <div class="section">
+  <div class="section" style="grid-template-columns: 1fr;">
     <div>
       
       <h1 style="font-size: clamp(2.5rem, 5vw, 4rem); line-height: 1.1; margin-bottom: 1rem;">Trusted MEP engineering since 2002.</h1>
@@ -67,27 +67,38 @@
         focus.
       </p>
     </div>
-    <img
-      src="/assets/who_are_we2-qdbeiqswhdnaux9mqu7h291hy9w7jtpohpyaaaxsog.jpg.jpeg"
-      alt="ASDA Engineering project team"
-    />
   </div>
 </section>
 
-<section class="section mission-vision-section">
-  <div class="statement left">
-    <h2>Mission</h2>
-    <p>
-      To be the leading mechanical and electrical service provider in
-      construction and related fields for both state and private-sector clients.
-    </p>
-  </div>
-  <div class="statement right">
-    <h2>Vision</h2>
-    <p>
-      To become a premier player in Sri Lanka's growing market as a trusted
-      provider of engineering products and services.
-    </p>
+<section class="section">
+  <div class="mission-vision-grid">
+    <div class="mv-card">
+      <div class="mv-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"></circle>
+          <circle cx="12" cy="12" r="6"></circle>
+          <circle cx="12" cy="12" r="2"></circle>
+        </svg>
+      </div>
+      <h2>Our Mission</h2>
+      <p>
+        To be the leading mechanical and electrical service provider in
+        construction and related fields for both state and private-sector clients.
+      </p>
+    </div>
+    <div class="mv-card">
+      <div class="mv-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path>
+          <circle cx="12" cy="12" r="3"></circle>
+        </svg>
+      </div>
+      <h2>Our Vision</h2>
+      <p>
+        To become a premier player in Sri Lanka's growing market as a trusted
+        provider of engineering products and services.
+      </p>
+    </div>
   </div>
 </section>
 
@@ -130,10 +141,7 @@
 
 <section class="section">
   <div class="section-header center">
-    <h1>
-      Experienced direction across administration, engineering, and
-      maintenance.
-    </h1>
+    <h1>Our Expertise</h1>
     <!-- <p>
       ASDA Engineering is led by a multidisciplinary management team supporting
       project delivery, technical coordination, operations, administration, and
@@ -146,7 +154,7 @@
         <img src={leader.image} alt={leader.name} />
         <div>
           <h3>{leader.name}</h3>
-          <p>{leader.role}</p>
+          <p><strong>{leader.role}</strong></p>
           {#if leader.credential}
             <p>{leader.credential}</p>
           {/if}

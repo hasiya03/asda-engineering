@@ -5,18 +5,25 @@
   import { siteRevealed } from '../store.js';
 
   let isNavOpen = false;
-  let isLoading = true;
-  let showLoader = true;
   let showBackToTop = false;
 
   onMount(() => {
-    setTimeout(() => {
-      isLoading = false;
-      setTimeout(() => {
-        showLoader = false;
-        siteRevealed.set(true);
-      }, 500);
-    }, 2000);
+    siteRevealed.set(true);
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+    const targets = document.querySelectorAll('.section-header, .card, .project-card, .team-card, .mv-card, .info-card');
+    targets.forEach(target => {
+      target.classList.add('reveal-on-scroll');
+      observer.observe(target);
+    });
   });
 
   const checkScroll = () => {
@@ -50,44 +57,11 @@
   <title>ASDA Engineering | MEP Engineers & Contractors</title>
 </svelte:head>
 
-{#if showLoader}
-  <div class="site-loader" class:fade-out={!isLoading}>
-    <svg viewBox="0 0 100 100" width="150" height="150" class="hvac-loader">
-      <!-- Roof -->
-      <path d="M 10 45 L 50 15 L 90 45" fill="none" stroke="var(--brand)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-      <!-- Base & Floor -->
-      <path d="M 20 45 L 20 90 M 80 45 L 80 90" fill="none" stroke="var(--brand-dark)" stroke-width="6" stroke-linecap="round"/>
-      <path d="M 10 90 L 90 90" fill="none" stroke="var(--brand-dark)" stroke-width="6" stroke-linecap="round"/>
-      <!-- Chimney -->
-      <path d="M 70 30 L 70 12 L 82 12 L 82 39" fill="none" stroke="var(--brand-dark)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-      <line x1="66" y1="12" x2="86" y2="12" stroke="var(--brand-dark)" stroke-width="6" stroke-linecap="round"/>
-      <!-- Outer fan ring -->
-      <circle cx="50" cy="58" r="22" fill="none" stroke="var(--brand-dark)" stroke-width="4"/>
-      <!-- Spinning fan -->
-      <g class="spinning-fan" style="transform-origin: 50px 58px;">
-        <circle cx="50" cy="58" r="6" fill="var(--brand-dark)"/>
-        <path d="M 50 58 C 65 58, 60 38, 50 38 C 45 38, 45 50, 50 58" fill="none" stroke="var(--brand-dark)" stroke-width="4"/>
-        <path d="M 50 58 C 65 58, 60 38, 50 38 C 45 38, 45 50, 50 58" fill="none" stroke="var(--brand-dark)" stroke-width="4" transform="rotate(90 50 58)"/>
-        <path d="M 50 58 C 65 58, 60 38, 50 38 C 45 38, 45 50, 50 58" fill="none" stroke="var(--brand-dark)" stroke-width="4" transform="rotate(180 50 58)"/>
-        <path d="M 50 58 C 65 58, 60 38, 50 38 C 45 38, 45 50, 50 58" fill="none" stroke="var(--brand-dark)" stroke-width="4" transform="rotate(270 50 58)"/>
-      </g>
-    </svg>
-    <div class="loader-bar-container">
-      <div class="loader-bar"></div>
-    </div>
-  </div>
-{/if}
-
-<div class="site-wrapper" class:revealed={$siteRevealed}>
 <header class="site-header">
 
   <nav class="nav-shell" aria-label="Main navigation">
     <a class="brand" href="/" aria-label="ASDA Engineering home" on:click={closeNav}>
       <img src="/assets/Company_logo.png" alt="ASDA Engineering logo" />
-      <span>
-        <strong>ASDA Engineering</strong>
-        <small>MEP Engineers & Contractors</small>
-      </span>
     </a>
 
     <button
@@ -108,8 +82,6 @@
           <a href={item.href} class:active={$page.url.pathname === item.href} on:click={closeNav}>{item.label}</a>
         {/each}
       </div>
-
-      <a class="nav-cta" href="/contact" on:click={closeNav}>Request Consultation</a>
     </div>
   </nav>
 </header>
@@ -188,15 +160,4 @@
       height: 44px;
     }
   }
-
-  .site-wrapper {
-    opacity: 0;
-    transform: scale(0.92);
-    transition: opacity 1.2s cubic-bezier(0.2, 0.8, 0.2, 1), transform 1.2s cubic-bezier(0.2, 0.8, 0.2, 1);
-  }
-  .site-wrapper.revealed {
-    opacity: 1;
-    transform: none;
-  }
 </style>
-</div>
