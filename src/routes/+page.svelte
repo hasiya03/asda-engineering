@@ -113,15 +113,15 @@
     </p>
 
     <div class="flex flex-wrap justify-center gap-8 md:gap-16 mb-12">
-      <div class="flex flex-col items-center">
+      <div class="flex flex-col items-center min-w-[140px]">
         <strong class="text-4xl md:text-5xl font-bold text-brand mb-1">{Math.floor($numProjects)}+</strong>
         <span class="text-sm font-semibold uppercase tracking-wider text-gray-500">Projects</span>
       </div>
-      <div class="flex flex-col items-center">
+      <div class="flex flex-col items-center min-w-[140px]">
         <strong class="text-4xl md:text-5xl font-bold text-brand mb-1">{Math.floor($numEmployees)}+</strong>
         <span class="text-sm font-semibold uppercase tracking-wider text-gray-500">Employees</span>
       </div>
-      <div class="flex flex-col items-center">
+      <div class="flex flex-col items-center min-w-[140px]">
         <strong class="text-4xl md:text-5xl font-bold text-brand mb-1">{Math.floor($numTurnover)}M+</strong>
         <span class="text-sm font-semibold uppercase tracking-wider text-gray-500">Annual Turnover</span>
       </div>
