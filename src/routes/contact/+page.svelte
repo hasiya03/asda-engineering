@@ -84,7 +84,7 @@
       </div>
 
       <div class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm p-1">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6555.028349450865!2d79.91400767674429!3d6.906520618590264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae259fdb4ec7bc5%3A0x6cc3003ef326eaf5!2sASDA%20Engineering%20(Pvt)%20Ltd!5e1!3m2!1sen!2slk!4v1782753067072!5m2!1sen!2slk" width="100%" height="100%" style="border:0; display: block; min-height: 250px;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15843.467607164132!2d79.916583!3d6.906515!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae259fdb4ec7bc5%3A0x6cc3003ef326eaf5!2sASDA%20Engineering%20(Pvt)%20Ltd!5e0!3m2!1sen!2slk!4v1783617578142!5m2!1sen!2slk" width="100%" height="100%" style="border:0; display: block; min-height: 250px;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
       </div>
     </aside>
   </div>
