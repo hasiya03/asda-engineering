@@ -195,18 +195,22 @@
     
     <div class="advantages-grid">
       <article class="card">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: block; margin: 0 auto 16px;"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
         <h4 style="font-size: 1.2rem; margin-bottom: 12px;">End-to-End Execution</h4>
         <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 0;">Complete consultancy, design, build, installation, and commissioning capabilities.</p>
       </article>
       <article class="card">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: block; margin: 0 auto 16px;"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
         <h4 style="font-size: 1.2rem; margin-bottom: 12px;">In-House Infrastructure</h4>
         <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 0;">We maintain our own plant equipment and a fully equipped workshop facility, ensuring zero delays.</p>
       </article>
       <article class="card">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: block; margin: 0 auto 16px;"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
         <h4 style="font-size: 1.2rem; margin-bottom: 12px;">Certified Excellence</h4>
         <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 0;">Operating with ISO-certified quality management and proud ICTAD EM 2 contractor status.</p>
       </article>
       <article class="card">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: block; margin: 0 auto 16px;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
         <h4 style="font-size: 1.2rem; margin-bottom: 12px;">Reliable Support</h4>
         <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 0;">Cost-conscious planning and highly responsive support across every single project stage.</p>
       </article>
