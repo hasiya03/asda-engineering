@@ -55,46 +55,36 @@
   ];
 </script>
 
-<section class="page-hero">
-  <div class="section" style="grid-template-columns: 1fr;">
-    <div>
-      
-      <h1>Trusted MEP engineering since 2002.</h1>
-      <p class="lead">
-        ASDA Engineering is a Sri Lankan mechanical, electrical, and plumbing
-        engineering contractor serving state and private-sector construction
-        projects with disciplined execution, trained teams, and long-term client
-        focus.
-      </p>
-    </div>
+<section class="bg-gray-50/80 border-b border-gray-200 py-24 px-6 text-center">
+  <div class="max-w-4xl mx-auto">
+    <h1 class="text-4xl md:text-5xl font-bold text-[#041C44] tracking-tight mb-6">Trusted MEP engineering since 2002.</h1>
+    <p class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto m-0">
+      ASDA Engineering is a Sri Lankan mechanical, electrical, and plumbing
+      engineering contractor serving state and private-sector construction
+      projects with disciplined execution, trained teams, and long-term client
+      focus.
+    </p>
   </div>
 </section>
 
-<section class="section">
-  <div class="mission-vision-grid">
-    <div class="mv-card">
-      <div class="mv-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="12" cy="12" r="10"></circle>
-          <circle cx="12" cy="12" r="6"></circle>
-          <circle cx="12" cy="12" r="2"></circle>
-        </svg>
+<section class="py-24 px-6 bg-white max-w-6xl mx-auto border-b border-gray-200">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div class="bg-gray-50 rounded-xl p-8 border border-gray-200 shadow-sm text-center">
+      <div class="inline-flex justify-center items-center w-20 h-20 rounded-full bg-white shadow-sm text-brand mb-6 mx-auto">
+        <span class="material-symbols-outlined text-5xl">target</span>
       </div>
-      <h2>Our Mission</h2>
-      <p>
+      <h2 class="text-2xl font-bold text-[#041C44] mb-4">Our Mission</h2>
+      <p class="text-lg text-gray-600 leading-relaxed">
         To be the leading mechanical and electrical service provider in
         construction and related fields for both state and private-sector clients.
       </p>
     </div>
-    <div class="mv-card">
-      <div class="mv-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path>
-          <circle cx="12" cy="12" r="3"></circle>
-        </svg>
+    <div class="bg-gray-50 rounded-xl p-8 border border-gray-200 shadow-sm text-center">
+      <div class="inline-flex justify-center items-center w-20 h-20 rounded-full bg-white shadow-sm text-brand mb-6 mx-auto">
+        <span class="material-symbols-outlined text-5xl">visibility</span>
       </div>
-      <h2>Our Vision</h2>
-      <p>
+      <h2 class="text-2xl font-bold text-[#041C44] mb-4">Our Vision</h2>
+      <p class="text-lg text-gray-600 leading-relaxed">
         To become a premier player in Sri Lanka's growing market as a trusted
         provider of engineering products and services.
       </p>
@@ -115,23 +105,23 @@
       </p>
     </div>
     <div class="stats-row">
-      <article class="card stat">
+      <article class="card stat border border-transparent hover:border-cyan-500/45">
         <strong>2002</strong>
         <span>Established</span>
       </article>
-      <article class="card stat">
+      <article class="card stat border border-transparent hover:border-cyan-500/45">
         <strong>150+</strong>
         <span>Employees</span>
       </article>
-      <article class="card stat">
+      <article class="card stat border border-transparent hover:border-cyan-500/45">
         <strong>Rs. 900M+</strong>
         <span>Annual turnover</span>
       </article>
-      <article class="card stat">
+      <article class="card stat border border-transparent hover:border-cyan-500/45">
         <strong>ISO</strong>
         <span>9001:2015 certified</span>
       </article>
-      <article class="card stat">
+      <article class="card stat border border-transparent hover:border-cyan-500/45">
         <strong>EM 2</strong>
         <span>ICTAD registered</span>
       </article>
@@ -139,43 +129,37 @@
   </div>
 </section> -->
 
-<section class="section">
-  <div class="section-header center">
-    <div>
-    
-      <h1>Industry recognized standards</h1>
-    </div>
-    <p class="lead">
+<section class="py-24 px-6 max-w-6xl mx-auto border-b border-gray-200 text-center">
+  <div class="max-w-3xl mx-auto mb-16">
+    <h2 class="text-3xl md:text-4xl font-bold text-[#041C44] tracking-tight mb-4">Industry recognized standards</h2>
+    <p class="text-lg text-gray-600 leading-relaxed">
       ASDA Engineering's accreditations reinforce our commitment to professional
       standards, quality management, and dependable project execution.
     </p>
   </div>
-  <div class="logo-strip accreditation-strip">
+  <div class="flex flex-wrap justify-center items-center gap-8 md:gap-12 opacity-80 mix-blend-multiply">
     {#each accreditations as accreditation}
-      <div class="logo-tile accreditation-tile">
-        <img src={accreditation} alt="ASDA Engineering accreditation logo" />
+      <div class="w-32 md:w-40 flex justify-center items-center p-4 transition-all duration-300 hover:opacity-100 hover:scale-105 filter grayscale hover:grayscale-0">
+        <img src={accreditation} alt="ASDA Engineering accreditation logo" class="max-w-full h-auto object-contain" />
       </div>
     {/each}
   </div>
 </section>
-<section class="section">
-  <div class="section-header center">
-    <h1>Our Expertise</h1>
-    <!-- <p>
-      ASDA Engineering is led by a multidisciplinary management team supporting
-      project delivery, technical coordination, operations, administration, and
-      maintenance.
-    </p> -->
+<section class="py-24 px-6 max-w-6xl mx-auto">
+  <div class="text-center max-w-3xl mx-auto mb-16">
+    <h2 class="text-3xl md:text-4xl font-bold text-[#041C44] tracking-tight mb-4">Our Expertise</h2>
   </div>
-  <div class="team-grid">
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
     {#each leaders as leader}
-      <article class="team-card">
-        <img src={leader.image} alt={leader.name} />
-        <div>
-          <h3>{leader.name}</h3>
-          <p><strong>{leader.role}</strong></p>
+      <article class="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-200 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl group hover:border-cyan-500/45">
+        <div class="aspect-square bg-gray-50 flex items-end justify-center overflow-hidden">
+          <img src={leader.image} alt={leader.name} class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+        </div>
+        <div class="p-6 text-center">
+          <h3 class="text-xl font-semibold text-[#041C44] mb-2">{leader.name}</h3>
+          <p class="text-brand font-semibold text-sm tracking-wide uppercase m-0">{leader.role}</p>
           {#if leader.credential}
-            <p>{leader.credential}</p>
+            <p class="text-gray-500 text-xs mt-2 m-0">{leader.credential}</p>
           {/if}
         </div>
       </article>

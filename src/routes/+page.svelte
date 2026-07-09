@@ -102,34 +102,34 @@
   }
 </script>
 
-<section class="modern-hero">
-  <div class="modern-hero-content">
-    <h1 class="modern-title">
+<section class="relative flex flex-col items-center justify-center text-center min-h-[calc(100vh-116px)] px-5 py-24 overflow-hidden before:content-[''] before:absolute before:inset-0 before:bg-white/75 before:z-10 before:pointer-events-none">
+  <div class="relative z-20 max-w-6xl mx-auto">
+    <h1 class="text-[clamp(2rem,4.5vw,4rem)] leading-[1.1] font-bold text-[#041C44] mb-6">
       Engineered to Run Flawlessly.<br/>
       Built to Last.
     </h1>
-    <p class="modern-lead">
+    <p class="text-[clamp(1.1rem,2vw,1.25rem)] text-gray-600 leading-relaxed max-w-2xl mx-auto mb-12">
       Don't let poorly designed systems derail your operations. We provide expert consultancy, installation, and balancing for MEP systems across Sri Lanka, ensuring your building runs at peak efficiency from day one.
     </p>
 
-    <div class="modern-stats">
-      <div class="modern-stat">
-        <strong>{Math.floor($numProjects)}+</strong>
-        <span>Projects</span>
+    <div class="flex flex-wrap justify-center gap-8 md:gap-16 mb-12">
+      <div class="flex flex-col items-center">
+        <strong class="text-4xl md:text-5xl font-bold text-brand mb-1">{Math.floor($numProjects)}+</strong>
+        <span class="text-sm font-semibold uppercase tracking-wider text-gray-500">Projects</span>
       </div>
-      <div class="modern-stat">
-        <strong>{Math.floor($numEmployees)}+</strong>
-        <span>Employees</span>
+      <div class="flex flex-col items-center">
+        <strong class="text-4xl md:text-5xl font-bold text-brand mb-1">{Math.floor($numEmployees)}+</strong>
+        <span class="text-sm font-semibold uppercase tracking-wider text-gray-500">Employees</span>
       </div>
-      <div class="modern-stat">
-        <strong>{Math.floor($numTurnover)}M+</strong>
-        <span>Annual Turnover</span>
+      <div class="flex flex-col items-center">
+        <strong class="text-4xl md:text-5xl font-bold text-brand mb-1">{Math.floor($numTurnover)}M+</strong>
+        <span class="text-sm font-semibold uppercase tracking-wider text-gray-500">Annual Turnover</span>
       </div>
     </div>
 
-    <div class="modern-actions">
-      <a class="button" href="/contact">Request a Consultation</a>
-      <a class="button secondary" href="/projects">View Projects</a>
+    <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+      <a class="inline-flex justify-center items-center px-8 py-4 bg-brand text-white font-semibold rounded-lg transition-all duration-300 shadow-md hover:bg-[#086330] hover:-translate-y-0.5 hover:shadow-xl w-full sm:w-auto" href="/contact">Request a Consultation</a>
+      <a class="inline-flex justify-center items-center px-8 py-4 bg-transparent text-brand font-semibold rounded-lg border-2 border-brand transition-all duration-300 hover:bg-brand hover:text-white hover:-translate-y-0.5 hover:shadow-xl w-full sm:w-auto" href="/projects">View Projects</a>
     </div>
   </div>
 
@@ -184,133 +184,142 @@
   </div>
 </section>
 
-<section class="soft-band">
-  <div class="section" style="max-width: 1200px; margin: 0 auto;">
-    <div style="text-align: center; max-width: 800px; margin: 0 auto 3rem auto;">
-      <h2>Our Approach & Capabilities</h2>
-      <p style="font-size: 1.15rem; color: var(--muted); margin-bottom: 0;">
+<section class="bg-gray-50/80 border-t border-b border-gray-200 py-20 px-6">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold text-[#041C44] mb-6 tracking-tight">Our Approach & Capabilities</h2>
+      <p class="text-lg text-gray-600 leading-relaxed">
         ASDA Engineering delivers comprehensive solutions across traditional construction, Engineering, Procurement, and Construction (EPC), partnering, and joint venture contracts. Our core strength lies in bridging the gap between advanced technical engineering and strictly disciplined on-site execution.
       </p>
     </div>
     
-    <div class="advantages-grid">
-      <article class="card">
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: block; margin: 0 auto 16px;"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
-        <h4 style="font-size: 1.2rem; margin-bottom: 12px;">End-to-End Execution</h4>
-        <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 0;">Complete consultancy, design, build, installation, and commissioning capabilities.</p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <article class="bg-white rounded-xl p-8 border border-gray-200 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-cyan-500/45">
+        <span class="material-symbols-outlined block text-brand text-4xl mb-4">layers</span>
+        <h4 class="text-xl font-semibold text-[#041C44] mb-3">End-to-End Execution</h4>
+        <p class="text-gray-600 text-sm leading-relaxed">Complete consultancy, design, build, installation, and commissioning capabilities.</p>
       </article>
-      <article class="card">
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: block; margin: 0 auto 16px;"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
-        <h4 style="font-size: 1.2rem; margin-bottom: 12px;">In-House Infrastructure</h4>
-        <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 0;">We maintain our own plant equipment and a fully equipped workshop facility, ensuring zero delays.</p>
+      <article class="bg-white rounded-xl p-8 border border-gray-200 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-cyan-500/45">
+        <span class="material-symbols-outlined block text-brand text-4xl mb-4">domain</span>
+        <h4 class="text-xl font-semibold text-[#041C44] mb-3">In-House Infrastructure</h4>
+        <p class="text-gray-600 text-sm leading-relaxed">We maintain our own plant equipment and a fully equipped workshop facility, ensuring zero delays.</p>
       </article>
-      <article class="card">
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: block; margin: 0 auto 16px;"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
-        <h4 style="font-size: 1.2rem; margin-bottom: 12px;">Certified Excellence</h4>
-        <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 0;">Operating with ISO-certified quality management and proud ICTAD EM 2 contractor status.</p>
+      <article class="bg-white rounded-xl p-8 border border-gray-200 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-cyan-500/45">
+        <span class="material-symbols-outlined block text-brand text-4xl mb-4">verified</span>
+        <h4 class="text-xl font-semibold text-[#041C44] mb-3">Certified Excellence</h4>
+        <p class="text-gray-600 text-sm leading-relaxed">Operating with ISO-certified quality management and proud ICTAD EM 2 contractor status.</p>
       </article>
-      <article class="card">
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: block; margin: 0 auto 16px;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        <h4 style="font-size: 1.2rem; margin-bottom: 12px;">Reliable Support</h4>
-        <p style="font-size: 0.95rem; color: var(--muted); margin-bottom: 0;">Cost-conscious planning and highly responsive support across every single project stage.</p>
+      <article class="bg-white rounded-xl p-8 border border-gray-200 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-cyan-500/45">
+        <span class="material-symbols-outlined block text-brand text-4xl mb-4">security</span>
+        <h4 class="text-xl font-semibold text-[#041C44] mb-3">Reliable Support</h4>
+        <p class="text-gray-600 text-sm leading-relaxed">Cost-conscious planning and highly responsive support across every single project stage.</p>
       </article>
     </div>
   </div>
 </section>
 
-<section class="section">
-  <div class="section-header" style="display: block;">
-    <h2>Proven experience across Sri Lanka's critical built environments.</h2>
+<section class="py-24 px-6 max-w-6xl mx-auto">
+  <div class="mb-16 text-center max-w-3xl mx-auto">
+    <h2 class="text-3xl md:text-4xl font-bold text-[#041C44] tracking-tight">Proven experience across Sri Lanka's critical built environments.</h2>
   </div>
 
-  <div class="grid three">
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
     {#each projects as project}
-      <article class="project-card">
-        <img src={project.image} alt={project.title} />
-        <div>
-          <span>{project.category}</span>
-          <h3>{project.title}</h3>
-          <p>{project.detail}</p>
+      <article class="bg-white rounded-xl overflow-hidden shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-xl group border border-transparent hover:border-cyan-500/45">
+        <div class="h-56 overflow-hidden">
+          <img src={project.image} alt={project.title} class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+        </div>
+        <div class="p-6">
+          <span class="inline-block px-3 py-1 bg-green-50 text-brand text-xs font-semibold uppercase tracking-wider rounded-full mb-4">{project.category}</span>
+          <h3 class="text-xl font-semibold text-[#041C44] mb-3">{project.title}</h3>
+          <p class="text-sm text-gray-600 leading-relaxed m-0">{project.detail}</p>
         </div>
       </article>
     {/each}
   </div>
-  <div class="cta-row">
-    <a class="button" href="/projects">Explore Portfolio</a>
+  <div class="mt-16 flex justify-center">
+    <a class="inline-flex justify-center items-center px-8 py-4 bg-brand text-white font-semibold rounded-lg transition-all duration-300 shadow-md hover:bg-brand-dark hover:-translate-y-0.5 hover:shadow-xl" href="/projects">Explore Portfolio</a>
   </div>
 </section>
 
-<section class="points-section">
-  <div class="points-bg" style="background-image: url('/assets/who_are_we1.jpg.jpeg');"></div>
-  <div class="points-overlay"></div>
-  <div class="section" style="position: relative; z-index: 2;">
-    <div class="grid three points-grid">
-      <article class="card point-card">
-        <span class="point-icon"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg></span>
-        <h3>Over Two Decades of Experience</h3>
-        <p>Established in 2002, we bring a long-standing, strong reputation as a trusted MEP engineering contractor to every project.</p>
+<section class="relative py-24 px-6 overflow-hidden min-h-[90vh] flex items-center justify-center">
+  <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('/assets/who_are_we1.jpg.jpeg');"></div>
+  <div class="absolute inset-0 bg-[#041C44]/90 z-10"></div>
+  <div class="relative z-20 max-w-6xl mx-auto w-full">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <article class="bg-white/10 backdrop-blur-md rounded-xl p-8 border border-white/20 text-white transition-transform duration-300 hover:-translate-y-1 hover:border-cyan-500/45">
+        <span class="material-symbols-outlined block text-3xl text-brand mb-4">history</span>
+        <h3 class="text-xl font-semibold text-white mb-3">Over Two Decades of Experience</h3>
+        <p class="text-sm text-white/80 leading-relaxed">Established in 2002, we bring a long-standing, strong reputation as a trusted MEP engineering contractor to every project.</p>
       </article>
-      <article class="card point-card">
-        <span class="point-icon"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span>
-        <h3>Rapid & Responsive Service</h3>
-        <p>We prioritize rapid response times and attentive service, ensuring your project keeps moving without unnecessary delays.</p>
+      <article class="bg-white/10 backdrop-blur-md rounded-xl p-8 border border-white/20 text-white transition-transform duration-300 hover:-translate-y-1 hover:border-cyan-500/45">
+        <span class="material-symbols-outlined block text-3xl text-brand mb-4">flash_on</span>
+        <h3 class="text-xl font-semibold text-white mb-3">Rapid & Responsive Service</h3>
+        <p class="text-sm text-white/80 leading-relaxed">We prioritize rapid response times and attentive service, ensuring your project keeps moving without unnecessary delays.</p>
       </article>
-      <article class="card point-card">
-        <span class="point-icon"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
-        <h3>Focus on Long-Term Partnerships</h3>
-        <p>We aren't just looking for a single contract; we approach every project with the goal of building lasting, collaborative relationships.</p>
+      <article class="bg-white/10 backdrop-blur-md rounded-xl p-8 border border-white/20 text-white transition-transform duration-300 hover:-translate-y-1 hover:border-cyan-500/45">
+        <span class="material-symbols-outlined block text-3xl text-brand mb-4">handshake</span>
+        <h3 class="text-xl font-semibold text-white mb-3">Focus on Long-Term Partnerships</h3>
+        <p class="text-sm text-white/80 leading-relaxed">We aren't just looking for a single contract; we approach every project with the goal of building lasting, collaborative relationships.</p>
       </article>
-      <article class="card point-card">
-        <span class="point-icon"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="2" x2="12" y2="22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span>
-        <h3>Cost-Effective Project Delivery</h3>
-        <p>High-quality engineering shouldn't break the budget. We are committed to delivering exceptional results at an affordable price point.</p>
+      <article class="bg-white/10 backdrop-blur-md rounded-xl p-8 border border-white/20 text-white transition-transform duration-300 hover:-translate-y-1 hover:border-cyan-500/45">
+        <span class="material-symbols-outlined block text-3xl text-brand mb-4">price_check</span>
+        <h3 class="text-xl font-semibold text-white mb-3">Cost-Effective Project Delivery</h3>
+        <p class="text-sm text-white/80 leading-relaxed">High-quality engineering shouldn't break the budget. We are committed to delivering exceptional results at an affordable price point.</p>
       </article>
-      <article class="card point-card">
-        <span class="point-icon"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></span>
-        <h3>Strict Site Discipline & Responsibility</h3>
-        <p>We operate with high technical capability and strict on-site discipline, guaranteeing that all work is completed safely and responsibly.</p>
+      <article class="bg-white/10 backdrop-blur-md rounded-xl p-8 border border-white/20 text-white transition-transform duration-300 hover:-translate-y-1 hover:border-cyan-500/45">
+        <span class="material-symbols-outlined block text-3xl text-brand mb-4">rule</span>
+        <h3 class="text-xl font-semibold text-white mb-3">Strict Site Discipline & Responsibility</h3>
+        <p class="text-sm text-white/80 leading-relaxed">We operate with high technical capability and strict on-site discipline, guaranteeing that all work is completed safely and responsibly.</p>
       </article>
-      <article class="card point-card">
-        <span class="point-icon"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></span>
-        <h3>Trusted by the Public & Private Sectors</h3>
-        <p>Our high rate of repeat contracts with local contractors, councils, and state departments proves the confidence clients place in our work.</p>
+      <article class="bg-white/10 backdrop-blur-md rounded-xl p-8 border border-white/20 text-white transition-transform duration-300 hover:-translate-y-1 hover:border-cyan-500/45">
+        <span class="material-symbols-outlined block text-3xl text-brand mb-4">verified_user</span>
+        <h3 class="text-xl font-semibold text-white mb-3">Trusted by the Public & Private Sectors</h3>
+        <p class="text-sm text-white/80 leading-relaxed">Our high rate of repeat contracts with local contractors, councils, and state departments proves the confidence clients place in our work.</p>
       </article>
     </div>
   </div>
 </section>
 
-<section class="section">
-  <div class="section-header" style="display: block;">
-    <h2>Complete MEP capability under one engineering partner.</h2>
+<section class="py-24 px-6 max-w-6xl mx-auto border-t border-gray-200">
+  <div class="mb-16 text-center">
+    <h2 class="text-3xl md:text-4xl font-bold text-[#041C44] tracking-tight">Complete MEP capability under one engineering partner.</h2>
   </div>
 
-  <div class="grid three">
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
     {#each services as service}
-      <article class="card">
-        <span class="icon-box">{@html service[0]}</span>
-        <h3>{service[1]}</h3>
-        <p>{service[2]}</p>
+      <article class="bg-white rounded-xl p-8 border border-gray-200 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl text-center hover:border-cyan-500/45">
+        <span class="inline-flex justify-center items-center w-16 h-16 rounded-full bg-green-50 text-brand mb-6 mx-auto">{@html service[0]}</span>
+        <h3 class="text-xl font-semibold text-[#041C44] mb-3">{service[1]}</h3>
+        <p class="text-sm text-gray-600 leading-relaxed m-0">{service[2]}</p>
       </article>
     {/each}
   </div>
 </section>
 
-<section class="soft-band faq-section">
-  <div class="section">
-    <div class="section-header center">
-      <h2>Frequently Asked Questions</h2>
-      <p>Common questions about our MEP engineering capability and project delivery.</p>
+<section class="bg-gray-50/80 border-t border-gray-200 py-24 px-6">
+  <div class="max-w-4xl mx-auto">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold text-[#041C44] tracking-tight mb-4">Frequently Asked Questions</h2>
+      <p class="text-lg text-gray-600">Common questions about our MEP engineering capability and project delivery.</p>
     </div>
 
-    <div class="faq-accordion">
+    <div class="flex flex-col gap-4">
       {#each faqs as faq, index}
-        <div class="faq-item" class:active={activeFaq === index}>
-          <button class="faq-question" on:click={() => toggleFaq(index)} aria-expanded={activeFaq === index}>
+        <div class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm">
+          <button class="w-full flex items-center justify-between p-6 text-left bg-transparent border-none cursor-pointer text-lg font-semibold text-[#041C44] hover:bg-gray-50 transition-colors" on:click={() => toggleFaq(index)} aria-expanded={activeFaq === index}>
             {faq.question}
-            <span class="faq-icon"></span>
+            <span class="relative w-6 h-6 flex-shrink-0 ml-4">
+              <span class="absolute top-1/2 left-0 w-full h-0.5 bg-brand -translate-y-1/2 transition-transform duration-300" class:rotate-180={activeFaq === index}></span>
+              <span class="absolute top-0 left-1/2 w-0.5 h-full bg-brand -translate-x-1/2 transition-transform duration-300" class:rotate-90={activeFaq === index}></span>
+            </span>
           </button>
-          <div class="faq-answer">
-            <p>{faq.answer}</p>
+          <div class="grid transition-all duration-300 ease-in-out" style={activeFaq === index ? 'grid-template-rows: 1fr;' : 'grid-template-rows: 0fr;'}>
+            <div class="overflow-hidden">
+              <p class="p-6 pt-0 m-0 text-gray-600 leading-relaxed">
+                {faq.answer}
+              </p>
+            </div>
           </div>
         </div>
       {/each}

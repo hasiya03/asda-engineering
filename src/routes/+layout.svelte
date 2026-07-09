@@ -57,11 +57,11 @@
   <title>ASDA Engineering | MEP Engineers & Contractors</title>
 </svelte:head>
 
-<header class="site-header">
+<header class="sticky top-0 z-50 bg-white border-b border-gray-200">
 
-  <nav class="nav-shell" aria-label="Main navigation">
-    <a class="brand" href="/" aria-label="ASDA Engineering home" on:click={closeNav}>
-      <img src="/assets/Company_logo.png" alt="ASDA Engineering logo" />
+  <nav class="flex items-center justify-between px-6 py-4 max-w-6xl mx-auto" aria-label="Main navigation">
+    <a class="flex-shrink-0" href="/" aria-label="ASDA Engineering home" on:click={closeNav}>
+      <img class="h-12 w-auto" src="/assets/Company_logo.png" alt="ASDA Engineering logo" />
     </a>
 
     <button
@@ -76,10 +76,13 @@
       <span></span>
     </button>
 
-    <div class={`nav-menu ${isNavOpen ? 'open' : ''}`}>
-      <div class="nav-links">
+    <div class={`absolute top-full left-0 w-full bg-white border-b border-gray-200 p-6 md:static md:w-auto md:bg-transparent md:border-none md:p-0 transition-all duration-300 ${isNavOpen ? 'block' : 'hidden md:block'}`}>
+      <div class="flex flex-col gap-6 md:flex-row md:gap-8">
         {#each navItems as item}
-          <a href={item.href} class:active={$page.url.pathname === item.href} on:click={closeNav}>{item.label}</a>
+          <a href={item.href} class="group relative font-semibold py-2 uppercase text-sm tracking-wide transition-colors hover:text-gray-500 {$page.url.pathname === item.href ? 'text-brand' : 'text-gray-800'}" on:click={closeNav}>
+            {item.label}
+            <span class="absolute left-0 bottom-0 w-full h-[3px] bg-brand rounded-full transition-opacity duration-300 {$page.url.pathname === item.href ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}"></span>
+          </a>
         {/each}
       </div>
     </div>
@@ -90,80 +93,43 @@
   <slot />
 </main>
 
-<footer class="site-footer">
-  <div class="footer-grid">
-    <div>
-      <img class="footer-logo" src="/assets/Company_logo.png" alt="ASDA Engineering logo" />
-      <p>
+<footer class="bg-gray-50 border-t border-gray-200 px-6 pt-16 pb-8">
+  <div class="grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr] gap-12 max-w-6xl mx-auto mb-16 text-sm text-gray-600">
+    <div class="flex flex-col gap-4">
+      <img class="h-12 w-auto object-contain object-left" src="/assets/Company_logo.png" alt="ASDA Engineering logo" />
+      <p class="leading-relaxed">
         Mechanical, electrical, and plumbing engineering services for Sri Lanka's commercial,
         healthcare, hospitality, institutional, and state-sector projects.
       </p>
     </div>
 
-    <div>
-      <h2>Company</h2>
-      <a href="/">Home</a>
-      <a href="/about">About us</a>
-      <a href="/services">Services</a>
-      <a href="/projects">Projects</a>
-      <a href="/contact">Contact</a>
+    <div class="flex flex-col gap-3">
+      <h2 class="text-brand-dark font-bold uppercase tracking-wide text-xs mb-1">Company</h2>
+      <a class="hover:text-brand transition-colors" href="/">Home</a>
+      <a class="hover:text-brand transition-colors" href="/about">About</a>
+      <a class="hover:text-brand transition-colors" href="/services">Services</a>
+      <a class="hover:text-brand transition-colors" href="/projects">Projects</a>
+      <a class="hover:text-brand transition-colors" href="/contact">Contact</a>
     </div>
 
-    <div>
-      <h2>Contact</h2>
+    <div class="flex flex-col gap-3">
+      <h2 class="text-brand-dark font-bold uppercase tracking-wide text-xs mb-1">Contact</h2>
       <p>649, Suboothi Mawatha, Battaramulla, Sri Lanka</p>
-      <a href="tel:+94112871891">+94 11 2871891</a>
-      <a href="tel:+94112074200">+94 11 2074200</a>
-      <a href="mailto:asdaengineeringac@gmail.com">asdaengineeringac@gmail.com</a>
+      <a class="hover:text-brand transition-colors" href="tel:+94112871891">+94 11 2871891</a>
+      <a class="hover:text-brand transition-colors" href="tel:+94112074200">+94 11 2074200</a>
+      <a class="hover:text-brand transition-colors" href="mailto:asdaengineeringac@gmail.com">asdaengineeringac@gmail.com</a>
     </div>
   </div>
-  <div class="footer-bottom">
+  <div class="flex flex-col md:flex-row items-center justify-between max-w-6xl mx-auto pt-8 border-t border-gray-200 text-xs text-gray-500 gap-4">
     <span>Copyright 2026 ASDA Engineering. All rights reserved.</span>
-    <span>ISO 9001:2015 Certified | ICTAD EM 2 Registered</span>
+    <span class="font-semibold">ISO 9001:2015 Certified | ICTAD EM 2 Registered</span>
   </div>
 </footer>
 
 {#if showBackToTop && !isNavOpen}
-  <button class="back-to-top" on:click={scrollToTop} aria-label="Back to top">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M18 15l-6-6-6 6"/>
-    </svg>
+  <button class="fixed bottom-6 right-6 w-12 h-12 rounded-full bg-brand text-white border-none cursor-pointer shadow-lg z-50 flex items-center justify-center hover:bg-[#086330] focus:outline-none focus:ring-2 focus:ring-brand/50 active:scale-95 transition-all" on:click={scrollToTop} aria-label="Back to top">
+    <span class="material-symbols-outlined font-semibold text-2xl">arrow_upward</span>
   </button>
 {/if}
 
-<style>
-  .back-to-top {
-    position: fixed;
-    bottom: 24px;
-    right: 24px;
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    background: var(--brand);
-    color: var(--white);
-    border: none;
-    cursor: pointer;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    z-index: 90;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background 0.2s, transform 0.2s;
-    -webkit-tap-highlight-color: transparent;
-    outline: none;
-  }
-  .back-to-top:hover, .back-to-top:active, .back-to-top:focus {
-    background: var(--brand);
-  }
-  .back-to-top:hover {
-    transform: translateY(-3px);
-  }
-  @media (max-width: 640px) {
-    .back-to-top {
-      bottom: 16px;
-      right: 16px;
-      width: 44px;
-      height: 44px;
-    }
-  }
-</style>
+

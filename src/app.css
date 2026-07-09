@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   --brand: #0A7D3C;
   --brand-dark: #041C44;
@@ -26,7 +30,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   color: var(--brand-dark);
-  font-weight: 800;
+  font-weight: 700;
   margin-top: 0;
   margin-bottom: 1rem;
   line-height: 1.2;
@@ -68,7 +72,7 @@ a {
   color: var(--white);
   background: var(--brand);
   font-size: 0.8rem;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 0.02em;
 }
 
@@ -152,7 +156,7 @@ a {
   border-radius: 6px;
   color: #1f2937;
   font-size: 1.05rem;
-  font-weight: 700;
+  font-weight: 600;
   transition: all 0.2s ease;
 }
 
@@ -217,7 +221,7 @@ a {
   border-radius: 8px;
   color: var(--white);
   background: var(--brand);
-  font-weight: 700;
+  font-weight: 600;
   font-size: 1rem;
   letter-spacing: 0.02em;
   border: 2px solid var(--brand);
@@ -269,7 +273,7 @@ a {
 .modern-title {
   font-size: clamp(2rem, 4.5vw, 4rem);
   line-height: 1.1;
-  font-weight: 800;
+  font-weight: 700;
   color: var(--ink);
   margin-bottom: 24px;
 }
@@ -298,13 +302,13 @@ a {
 
 .modern-stat strong {
   font-size: 2.2rem;
-  font-weight: 800;
+  font-weight: 700;
   color: var(--ink);
 }
 
 .modern-stat span {
   font-size: 1.1rem;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--ink);
 }
 
@@ -539,9 +543,7 @@ a {
   background: var(--white);
 }
 
-.card:hover {
-  border-color: rgba(37, 150, 190, 0.45);
-}
+
 
 .icon-box {
   display: inline-flex;
@@ -592,7 +594,7 @@ a {
   display: flex;
   gap: 12px;
   color: #1f2937;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .check-list li::before {
@@ -1026,7 +1028,7 @@ textarea {
     display: flex;
     width: max-content;
     gap: 16px;
-    animation: hero-scroll 25s linear infinite;
+    animation: hero-scroll 45s linear infinite;
   }
 
   .hero-track.reverse {
@@ -1516,16 +1518,17 @@ textarea {
 }
 
 /* Card Hover Animations */
-.card, .project-card, .team-card, .info-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.card, .project-card, .team-card, .info-card, .mv-card, .point-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
-.card:hover, .project-card:hover, .team-card:hover {
+.card:hover, .project-card:hover, .team-card:hover, .mv-card:hover, .point-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+  box-shadow: 0 15px 30px rgba(4, 28, 68, 0.15); /* Brand Dark Blue Shadow */
+  border-color: rgba(37, 150, 190, 0.45); /* Blue glow border */
 }
 
 .info-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+  box-shadow: 0 10px 20px rgba(4, 28, 68, 0.1);
 }

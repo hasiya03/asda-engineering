@@ -81,43 +81,39 @@
   };
 </script>
 
-<section class="page-hero">
-  <div class="section" style="grid-template-columns: 1fr;">
-    <div>
- 
-      <h1>Portfolio of major MEP work across Sri Lanka.</h1>
-      <p class="lead">
-        Explore completed and ongoing projects across hospitality, commercial, healthcare,
-        institutional, and specialist building environments.
-      </p>
-    </div>
-    
+<section class="bg-gray-50/80 border-b border-gray-200 py-24 px-6 text-center">
+  <div class="max-w-4xl mx-auto">
+    <h1 class="text-4xl md:text-5xl font-bold text-[#041C44] tracking-tight mb-6">Portfolio of major MEP work across Sri Lanka.</h1>
+    <p class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto m-0">
+      Explore completed and ongoing projects across hospitality, commercial, healthcare,
+      institutional, and specialist building environments.
+    </p>
   </div>
 </section>
 
 {#each projectGroups as group}
-  <section class="section">
-    <div class="section-header">
-      <div>
-       
-        <h2>{group.title}</h2>
-      </div>
-      
+  <section class="py-24 px-6 max-w-6xl mx-auto">
+    <div class="mb-12">
+      <h2 class="text-3xl font-bold text-[#041C44] tracking-tight">{group.title}</h2>
     </div>
-    <div class="grid three">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
       {#each group.projects as project}
-        <article class="project-card">
-          {#if project[3]}
-            <div style="width: 100%; aspect-ratio: 16 / 10; background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('/assets/project location image/moh.jpg') center/cover no-repeat; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 16px; padding: 20px; text-align: center;">
-              <a href={project[2]} target="_blank" rel="noopener noreferrer" class="button" style="padding: 0 16px; min-height: 40px; font-size: 0.9rem;">View 3D Tour (Full Screen)</a>
-            </div>
-          {:else}
-            <img src={project[2]} alt={project[0]} />
-          {/if}
-          <div>
-            <span>{group.title}</span>
-            <h3>{project[0]}</h3>
-            <p>{project[1]}</p>
+        <article class="bg-white rounded-xl overflow-hidden shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-xl group flex flex-col border border-transparent hover:border-cyan-500/45">
+          <div class="h-56 overflow-hidden flex-shrink-0">
+            {#if project[3]}
+              <img src="/assets/project location image/moh.jpg" alt={project[0]} class="w-full h-full object-cover scale-[1.2] transition-transform duration-500 group-hover:scale-[1.3]" />
+            {:else}
+              <img src={project[2]} alt={project[0]} class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+            {/if}
+          </div>
+          <div class="p-6 flex flex-col flex-grow">
+            <h3 class="text-xl font-semibold text-[#041C44] mb-3">{project[0]}</h3>
+            <p class="text-sm text-gray-600 leading-relaxed m-0 mb-4">{project[1]}</p>
+            {#if project[3]}
+              <div class="mt-auto pt-2">
+                <a href={project[2]} target="_blank" rel="noopener noreferrer" class="inline-flex justify-center items-center px-4 py-2 bg-brand text-white font-semibold rounded-lg transition-colors hover:bg-brand-dark text-sm shadow-md">View 3D Tour</a>
+              </div>
+            {/if}
           </div>
         </article>
       {/each}
@@ -127,50 +123,34 @@
 
 {/each}
 
-<section class="soft-band faq-section">
-  <div class="section">
-    <div class="section-header center">
-      <h2>Complete Client Roster</h2>
-      <p>Explore our extensive history of over 100 successful MEP deliveries across key sectors in Sri Lanka.</p>
+<section class="bg-gray-50/80 border-t border-gray-200 py-24 px-6">
+  <div class="max-w-4xl mx-auto">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold text-[#041C44] tracking-tight mb-4">Complete Client Roster</h2>
+      <p class="text-lg text-gray-600">Explore our extensive history of over 100 successful MEP deliveries across key sectors in Sri Lanka.</p>
     </div>
 
-    <div class="faq-accordion">
+    <div class="flex flex-col gap-4">
       {#each clientCategories as category, index}
-        <div class="faq-item" class:active={activeCategory === index}>
-          <button class="faq-question" on:click={() => toggleCategory(index)} aria-expanded={activeCategory === index}>
+        <div class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm">
+          <button class="w-full flex items-center justify-between p-6 text-left bg-transparent border-none cursor-pointer text-lg font-semibold text-[#041C44] hover:bg-gray-50 transition-colors" on:click={() => toggleCategory(index)} aria-expanded={activeCategory === index}>
             {category.title} ({category.clients.length} Projects)
-            <span class="faq-icon"></span>
+            <span class="relative w-6 h-6 flex-shrink-0 ml-4">
+              <span class="absolute top-1/2 left-0 w-full h-0.5 bg-brand -translate-y-1/2 transition-transform duration-300" class:rotate-180={activeCategory === index}></span>
+              <span class="absolute top-0 left-1/2 w-0.5 h-full bg-brand -translate-x-1/2 transition-transform duration-300" class:rotate-90={activeCategory === index}></span>
+            </span>
           </button>
-          <div class="faq-answer">
-            <ul class="client-list">
-              {#each category.clients as client}
-                <li>{client}</li>
-              {/each}
-            </ul>
+          <div class="grid transition-all duration-300 ease-in-out" style={activeCategory === index ? 'grid-template-rows: 1fr;' : 'grid-template-rows: 0fr;'}>
+            <div class="overflow-hidden">
+              <ul class="columns-1 md:columns-2 gap-10 p-0 m-0 pb-6 px-6 list-none text-gray-600 text-sm leading-relaxed">
+                {#each category.clients as client}
+                  <li class="mb-2 break-inside-avoid relative pl-5 before:content-['•'] before:absolute before:left-0 before:text-brand">{client}</li>
+                {/each}
+              </ul>
+            </div>
           </div>
         </div>
       {/each}
     </div>
   </div>
 </section>
-
-<style>
-  .client-list {
-    margin: 0;
-    padding: 0 0 0 20px;
-    color: var(--muted);
-    font-size: 0.95rem;
-    line-height: 1.8;
-    column-count: 2;
-    column-gap: 40px;
-  }
-  .client-list li {
-    margin-bottom: 8px;
-    break-inside: avoid-column;
-  }
-  @media (max-width: 768px) {
-    .client-list {
-      column-count: 1;
-    }
-  }
-</style>
