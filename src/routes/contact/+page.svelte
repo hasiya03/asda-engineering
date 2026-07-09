@@ -50,7 +50,7 @@
     </form>
 
     <aside class="flex flex-col gap-6">
-      <div class="bg-gray-50 border border-gray-200 rounded-xl p-6 flex gap-5 transition-transform duration-300 hover:-translate-y-1 hover:shadow-md hover:border-cyan-500/45">
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-6 flex gap-5 transition-transform duration-300 hover:-translate-y-1 hover:shadow-md hover:border-brand-dark">
         <span class="inline-flex justify-center items-center w-12 h-12 rounded-full bg-white text-brand shadow-sm flex-shrink-0">
           <span class="material-symbols-outlined" style="font-size: 24px;">location_on</span>
         </span>
@@ -60,7 +60,7 @@
         </div>
       </div>
       
-      <div class="bg-gray-50 border border-gray-200 rounded-xl p-6 flex gap-5 transition-transform duration-300 hover:-translate-y-1 hover:shadow-md hover:border-cyan-500/45">
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-6 flex gap-5 transition-transform duration-300 hover:-translate-y-1 hover:shadow-md hover:border-brand-dark">
         <span class="inline-flex justify-center items-center w-12 h-12 rounded-full bg-white text-brand shadow-sm flex-shrink-0">
           <span class="material-symbols-outlined" style="font-size: 24px;">call</span>
         </span>
@@ -73,7 +73,7 @@
         </div>
       </div>
       
-      <div class="bg-gray-50 border border-gray-200 rounded-xl p-6 flex gap-5 transition-transform duration-300 hover:-translate-y-1 hover:shadow-md hover:border-cyan-500/45">
+      <div class="bg-gray-50 border border-gray-200 rounded-xl p-6 flex gap-5 transition-transform duration-300 hover:-translate-y-1 hover:shadow-md hover:border-brand-dark">
         <span class="inline-flex justify-center items-center w-12 h-12 rounded-full bg-white text-brand shadow-sm flex-shrink-0">
           <span class="material-symbols-outlined" style="font-size: 24px;">mail</span>
         </span>

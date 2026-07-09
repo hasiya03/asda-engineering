@@ -3,7 +3,7 @@
     {
       title: 'Ongoing Projects',
       projects: [
-        ['Ministry of Health Sri Lanka', 'Immersive 3D Chiller Room VR', 'https://view.berl.dev/viewer?scene=chillerroom_asda', true],
+        ['Ministry of Health Sri Lanka', '[Insert Ministry of Health description here]', 'https://view.berl.dev/viewer?scene=chillerroom_asda', true],
         ['International Conference Hall Nikanda', 'MEP - Rs. 550 million', '/assets/project location image/International Conference Hall Nikanda.png'],
         ['Examination Department Pallawatte', 'AC System - Rs. 40 million', '/assets/project location image/Examination Department Pallawatte.jpg'],
         ['Abewella & Pattipola Farm Project', 'Plumbing - Rs. 226 million', '/assets/project location image/AMBEWELLA PATTIPOLA FARM.jpg'],
@@ -98,12 +98,12 @@
     </div>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
       {#each group.projects as project}
-        <article class="bg-white rounded-xl overflow-hidden shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-xl group flex flex-col border border-transparent hover:border-cyan-500/45">
+        <article class="bg-white rounded-xl overflow-hidden shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-xl group flex flex-col border border-transparent hover:border-brand-dark">
           <div class="h-56 overflow-hidden flex-shrink-0">
             {#if project[3]}
-              <img src="/assets/project location image/moh.jpg" alt={project[0]} class="w-full h-full object-cover scale-[1.2] transition-transform duration-500 group-hover:scale-[1.3]" />
+              <img src="/assets/project location image/moh.jpg" alt={project[0]} class="w-full h-full object-cover scale-[1.15] transition-transform duration-500 group-hover:scale-[1.20]" />
             {:else}
-              <img src={project[2]} alt={project[0]} class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+              <img src={project[2]} alt={project[0]} class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
             {/if}
           </div>
           <div class="p-6 flex flex-col flex-grow">
@@ -111,7 +111,7 @@
             <p class="text-sm text-gray-600 leading-relaxed m-0 mb-4">{project[1]}</p>
             {#if project[3]}
               <div class="mt-auto pt-2">
-                <a href={project[2]} target="_blank" rel="noopener noreferrer" class="inline-flex justify-center items-center px-4 py-2 bg-brand text-white font-semibold rounded-lg transition-colors hover:bg-brand-dark text-sm shadow-md">View 3D Tour</a>
+                <a href={project[2]} target="_blank" rel="noopener noreferrer" class="inline-flex justify-center items-center px-4 py-2 bg-brand text-white font-semibold rounded-lg transition-colors hover:bg-brand-dark text-sm shadow-md">View 3D Tour <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg></a>
               </div>
             {/if}
           </div>
@@ -130,7 +130,7 @@
       <p class="text-lg text-gray-600">Explore our extensive history of over 100 successful MEP deliveries across key sectors in Sri Lanka.</p>
     </div>
 
-    <div class="flex flex-col gap-4">
+    <div class="flex flex-col gap-4 mt-12">
       {#each clientCategories as category, index}
         <div class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm">
           <button class="w-full flex items-center justify-between p-6 text-left bg-transparent border-none cursor-pointer text-lg font-semibold text-[#041C44] hover:bg-gray-50 transition-colors" on:click={() => toggleCategory(index)} aria-expanded={activeCategory === index}>

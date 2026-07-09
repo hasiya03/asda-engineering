@@ -46,7 +46,7 @@
 <section class="py-24 px-6 max-w-6xl mx-auto">
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
     {#each services as service}
-      <article class="bg-white rounded-xl p-8 border border-gray-200 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl text-center hover:border-cyan-500/45">
+      <article class="bg-white rounded-xl p-8 border border-gray-200 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl text-center hover:border-brand-dark">
         <span class="inline-flex justify-center items-center w-16 h-16 rounded-full bg-green-50 text-brand mb-6 mx-auto">{@html service[2]}</span>
         <h3 class="text-xl font-semibold text-[#041C44] mb-3">{service[0]}</h3>
         <p class="text-sm text-gray-600 leading-relaxed m-0">{service[1]}</p>
@@ -60,7 +60,7 @@
     <div class="rounded-2xl overflow-hidden shadow-lg">
       <img src="/assets/history_1.jpeg" alt="ASDA Engineering workshop facility" class="w-full h-auto object-cover" />
     </div>
-    <div class="flex flex-col gap-6">
+    <div class="flex flex-col gap-6 lg:pr-16 xl:pr-24">
       <h2 class="text-3xl md:text-4xl font-bold text-[#041C44] tracking-tight m-0">Structured to support demanding building-services projects.</h2>
       <p class="text-lg text-gray-600 leading-relaxed m-0">
         With owned plant equipment, a fully equipped workshop, trained technical staff, and a

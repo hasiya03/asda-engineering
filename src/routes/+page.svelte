@@ -128,8 +128,8 @@
     </div>
 
     <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
-      <a class="inline-flex justify-center items-center px-8 py-4 bg-brand text-white font-semibold rounded-lg transition-all duration-300 shadow-md hover:bg-[#086330] hover:-translate-y-0.5 hover:shadow-xl w-full sm:w-auto" href="/contact">Request a Consultation</a>
-      <a class="inline-flex justify-center items-center px-8 py-4 bg-transparent text-brand font-semibold rounded-lg border-2 border-brand transition-all duration-300 hover:bg-brand hover:text-white hover:-translate-y-0.5 hover:shadow-xl w-full sm:w-auto" href="/projects">View Projects</a>
+      <a class="inline-flex justify-center items-center px-8 py-4 bg-brand text-white font-semibold rounded-lg transition-all duration-300 shadow-md hover:bg-brand-dark hover:-translate-y-0.5 hover:shadow-xl w-full sm:w-[280px]" href="/contact">Request a Consultation</a>
+      <a class="inline-flex justify-center items-center px-8 py-4 bg-transparent text-brand font-semibold rounded-lg border-2 border-brand transition-all duration-300 hover:bg-brand-dark hover:border-brand-dark hover:text-white hover:-translate-y-0.5 hover:shadow-xl w-full sm:w-[280px]" href="/projects">View Projects</a>
     </div>
   </div>
 
@@ -194,22 +194,22 @@
     </div>
     
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-      <article class="bg-white rounded-xl p-8 border border-gray-200 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-cyan-500/45">
+      <article class="bg-white rounded-xl p-8 border border-gray-200 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-brand-dark">
         <span class="material-symbols-outlined block text-brand text-4xl mb-4">layers</span>
         <h4 class="text-xl font-semibold text-[#041C44] mb-3">End-to-End Execution</h4>
         <p class="text-gray-600 text-sm leading-relaxed">Complete consultancy, design, build, installation, and commissioning capabilities.</p>
       </article>
-      <article class="bg-white rounded-xl p-8 border border-gray-200 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-cyan-500/45">
+      <article class="bg-white rounded-xl p-8 border border-gray-200 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-brand-dark">
         <span class="material-symbols-outlined block text-brand text-4xl mb-4">domain</span>
         <h4 class="text-xl font-semibold text-[#041C44] mb-3">In-House Infrastructure</h4>
         <p class="text-gray-600 text-sm leading-relaxed">We maintain our own plant equipment and a fully equipped workshop facility, ensuring zero delays.</p>
       </article>
-      <article class="bg-white rounded-xl p-8 border border-gray-200 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-cyan-500/45">
+      <article class="bg-white rounded-xl p-8 border border-gray-200 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-brand-dark">
         <span class="material-symbols-outlined block text-brand text-4xl mb-4">verified</span>
         <h4 class="text-xl font-semibold text-[#041C44] mb-3">Certified Excellence</h4>
         <p class="text-gray-600 text-sm leading-relaxed">Operating with ISO-certified quality management and proud ICTAD EM 2 contractor status.</p>
       </article>
-      <article class="bg-white rounded-xl p-8 border border-gray-200 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-cyan-500/45">
+      <article class="bg-white rounded-xl p-8 border border-gray-200 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-brand-dark">
         <span class="material-symbols-outlined block text-brand text-4xl mb-4">security</span>
         <h4 class="text-xl font-semibold text-[#041C44] mb-3">Reliable Support</h4>
         <p class="text-gray-600 text-sm leading-relaxed">Cost-conscious planning and highly responsive support across every single project stage.</p>
@@ -225,9 +225,9 @@
 
   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
     {#each projects as project}
-      <article class="bg-white rounded-xl overflow-hidden shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-xl group border border-transparent hover:border-cyan-500/45">
+      <article class="bg-white rounded-xl overflow-hidden shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-xl group border border-transparent hover:border-brand-dark">
         <div class="h-56 overflow-hidden">
-          <img src={project.image} alt={project.title} class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+          <img src={project.image} alt={project.title} class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
         </div>
         <div class="p-6">
           <span class="inline-block px-3 py-1 bg-green-50 text-brand text-xs font-semibold uppercase tracking-wider rounded-full mb-4">{project.category}</span>
@@ -247,35 +247,35 @@
   <div class="absolute inset-0 bg-[#041C44]/90 z-10"></div>
   <div class="relative z-20 max-w-6xl mx-auto w-full">
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <article class="bg-white/10 backdrop-blur-md rounded-xl p-8 border border-white/20 text-white transition-transform duration-300 hover:-translate-y-1 hover:border-cyan-500/45">
+      <article class="bg-white rounded-xl p-8 border border-gray-200 text-[#041C44] transition-transform duration-300 hover:-translate-y-1 hover:border-brand-dark">
         <span class="material-symbols-outlined block text-3xl text-brand mb-4">history</span>
-        <h3 class="text-xl font-semibold text-white mb-3">Over Two Decades of Experience</h3>
-        <p class="text-sm text-white/80 leading-relaxed">Established in 2002, we bring a long-standing, strong reputation as a trusted MEP engineering contractor to every project.</p>
+        <h3 class="text-xl font-semibold text-[#041C44] mb-3">Over Two Decades of Experience</h3>
+        <p class="text-sm text-gray-600 leading-relaxed">Established in 2002, we bring a long-standing, strong reputation as a trusted MEP engineering contractor to every project.</p>
       </article>
-      <article class="bg-white/10 backdrop-blur-md rounded-xl p-8 border border-white/20 text-white transition-transform duration-300 hover:-translate-y-1 hover:border-cyan-500/45">
+      <article class="bg-white rounded-xl p-8 border border-gray-200 text-[#041C44] transition-transform duration-300 hover:-translate-y-1 hover:border-brand-dark">
         <span class="material-symbols-outlined block text-3xl text-brand mb-4">flash_on</span>
-        <h3 class="text-xl font-semibold text-white mb-3">Rapid & Responsive Service</h3>
-        <p class="text-sm text-white/80 leading-relaxed">We prioritize rapid response times and attentive service, ensuring your project keeps moving without unnecessary delays.</p>
+        <h3 class="text-xl font-semibold text-[#041C44] mb-3">Rapid & Responsive Service</h3>
+        <p class="text-sm text-gray-600 leading-relaxed">We prioritize rapid response times and attentive service, ensuring your project keeps moving without unnecessary delays.</p>
       </article>
-      <article class="bg-white/10 backdrop-blur-md rounded-xl p-8 border border-white/20 text-white transition-transform duration-300 hover:-translate-y-1 hover:border-cyan-500/45">
+      <article class="bg-white rounded-xl p-8 border border-gray-200 text-[#041C44] transition-transform duration-300 hover:-translate-y-1 hover:border-brand-dark">
         <span class="material-symbols-outlined block text-3xl text-brand mb-4">handshake</span>
-        <h3 class="text-xl font-semibold text-white mb-3">Focus on Long-Term Partnerships</h3>
-        <p class="text-sm text-white/80 leading-relaxed">We aren't just looking for a single contract; we approach every project with the goal of building lasting, collaborative relationships.</p>
+        <h3 class="text-xl font-semibold text-[#041C44] mb-3">Focus on Long-Term Partnerships</h3>
+        <p class="text-sm text-gray-600 leading-relaxed">We aren't just looking for a single contract; we approach every project with the goal of building lasting, collaborative relationships.</p>
       </article>
-      <article class="bg-white/10 backdrop-blur-md rounded-xl p-8 border border-white/20 text-white transition-transform duration-300 hover:-translate-y-1 hover:border-cyan-500/45">
+      <article class="bg-white rounded-xl p-8 border border-gray-200 text-[#041C44] transition-transform duration-300 hover:-translate-y-1 hover:border-brand-dark">
         <span class="material-symbols-outlined block text-3xl text-brand mb-4">price_check</span>
-        <h3 class="text-xl font-semibold text-white mb-3">Cost-Effective Project Delivery</h3>
-        <p class="text-sm text-white/80 leading-relaxed">High-quality engineering shouldn't break the budget. We are committed to delivering exceptional results at an affordable price point.</p>
+        <h3 class="text-xl font-semibold text-[#041C44] mb-3">Cost-Effective Project Delivery</h3>
+        <p class="text-sm text-gray-600 leading-relaxed">High-quality engineering shouldn't break the budget. We are committed to delivering exceptional results at an affordable price point.</p>
       </article>
-      <article class="bg-white/10 backdrop-blur-md rounded-xl p-8 border border-white/20 text-white transition-transform duration-300 hover:-translate-y-1 hover:border-cyan-500/45">
+      <article class="bg-white rounded-xl p-8 border border-gray-200 text-[#041C44] transition-transform duration-300 hover:-translate-y-1 hover:border-brand-dark">
         <span class="material-symbols-outlined block text-3xl text-brand mb-4">rule</span>
-        <h3 class="text-xl font-semibold text-white mb-3">Strict Site Discipline & Responsibility</h3>
-        <p class="text-sm text-white/80 leading-relaxed">We operate with high technical capability and strict on-site discipline, guaranteeing that all work is completed safely and responsibly.</p>
+        <h3 class="text-xl font-semibold text-[#041C44] mb-3">Strict Site Discipline & Responsibility</h3>
+        <p class="text-sm text-gray-600 leading-relaxed">We operate with high technical capability and strict on-site discipline, guaranteeing that all work is completed safely and responsibly.</p>
       </article>
-      <article class="bg-white/10 backdrop-blur-md rounded-xl p-8 border border-white/20 text-white transition-transform duration-300 hover:-translate-y-1 hover:border-cyan-500/45">
+      <article class="bg-white rounded-xl p-8 border border-gray-200 text-[#041C44] transition-transform duration-300 hover:-translate-y-1 hover:border-brand-dark">
         <span class="material-symbols-outlined block text-3xl text-brand mb-4">verified_user</span>
-        <h3 class="text-xl font-semibold text-white mb-3">Trusted by the Public & Private Sectors</h3>
-        <p class="text-sm text-white/80 leading-relaxed">Our high rate of repeat contracts with local contractors, councils, and state departments proves the confidence clients place in our work.</p>
+        <h3 class="text-xl font-semibold text-[#041C44] mb-3">Trusted by the Public & Private Sectors</h3>
+        <p class="text-sm text-gray-600 leading-relaxed">Our high rate of repeat contracts with local contractors, councils, and state departments proves the confidence clients place in our work.</p>
       </article>
     </div>
   </div>
@@ -288,7 +288,7 @@
 
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
     {#each services as service}
-      <article class="bg-white rounded-xl p-8 border border-gray-200 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl text-center hover:border-cyan-500/45">
+      <article class="bg-white rounded-xl p-8 border border-gray-200 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl text-center hover:border-brand-dark">
         <span class="inline-flex justify-center items-center w-16 h-16 rounded-full bg-green-50 text-brand mb-6 mx-auto">{@html service[0]}</span>
         <h3 class="text-xl font-semibold text-[#041C44] mb-3">{service[1]}</h3>
         <p class="text-sm text-gray-600 leading-relaxed m-0">{service[2]}</p>
