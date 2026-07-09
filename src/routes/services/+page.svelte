@@ -56,18 +56,18 @@
 </section>
 
 <section class="bg-gray-50/80 border-t border-gray-200 py-24 px-6">
-  <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+  <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
     <div class="rounded-2xl overflow-hidden shadow-lg">
       <img src="/assets/history_1.jpeg" alt="ASDA Engineering workshop facility" class="w-full h-auto object-cover" />
     </div>
-    <div class="flex flex-col gap-6 lg:pr-16 xl:pr-24">
+    <div class="flex flex-col gap-8 lg:pr-6">
       <h2 class="text-3xl md:text-4xl font-bold text-[#041C44] tracking-tight m-0">Structured to support demanding building-services projects.</h2>
       <p class="text-lg text-gray-600 leading-relaxed m-0">
         With owned plant equipment, a fully equipped workshop, trained technical staff, and a
         trusted subcontractor network, ASDA Engineering can support projects from early
         coordination to final system handover.
       </p>
-      <ul class="flex flex-col gap-3 p-0 m-0 list-none mt-4">
+      <ul class="flex flex-col gap-5 p-0 m-0 list-none mt-2">
         <li class="relative pl-8 text-gray-700 before:content-['✓'] before:absolute before:left-0 before:top-0 before:text-brand before:font-semibold before:text-lg">Consultancy and design coordination</li>
         <li class="relative pl-8 text-gray-700 before:content-['✓'] before:absolute before:left-0 before:top-0 before:text-brand before:font-semibold before:text-lg">Building, installation, and site execution</li>
         <li class="relative pl-8 text-gray-700 before:content-['✓'] before:absolute before:left-0 before:top-0 before:text-brand before:font-semibold before:text-lg">Testing, balancing, and commissioning</li>
