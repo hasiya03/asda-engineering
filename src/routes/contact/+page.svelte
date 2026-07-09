@@ -2,8 +2,8 @@
   <div class="section" style="grid-template-columns: 1fr;">
     <div>
      
-      <h1 style="font-size: clamp(2.5rem, 5vw, 4rem); line-height: 1.1; margin-bottom: 1rem;">Start a project inquiry with ASDA Engineering.</h1>
-      <p class="lead" style="font-size: clamp(1.15rem, 2vw, 1.5rem); line-height: 1.6;">
+      <h1>Start a project inquiry with ASDA Engineering.</h1>
+      <p class="lead">
         Contact our team for mechanical, electrical, plumbing, fire protection, fabrication,
         testing, balancing, commissioning, and maintenance requirements.
       </p>
@@ -75,8 +75,8 @@
         <div>
           <h3>Phone</h3>
           <p>
-            <a href="tel:+94112871891">+94-11-2871891</a><br>
-            <a href="tel:+94112074200">+94-11-2074200</a>
+            <a href="tel:+94112871891">+94 11 2871891</a><br>
+            <a href="tel:+94112074200">+94 11 2074200</a>
           </p>
         </div>
       </div>

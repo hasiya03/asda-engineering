@@ -102,16 +102,18 @@
 
     <div>
       <h2>Company</h2>
+      <a href="/">Home</a>
       <a href="/about">About us</a>
       <a href="/services">Services</a>
       <a href="/projects">Projects</a>
+      <a href="/contact">Contact</a>
     </div>
 
     <div>
       <h2>Contact</h2>
       <p>649, Suboothi Mawatha, Battaramulla, Sri Lanka</p>
-      <a href="tel:+94112871891">+94-11-2871891</a>
-      <a href="tel:+94112074200">+94-11-2074200</a>
+      <a href="tel:+94112871891">+94 11 2871891</a>
+      <a href="tel:+94112074200">+94 11 2074200</a>
       <a href="mailto:asdaengineeringac@gmail.com">asdaengineeringac@gmail.com</a>
     </div>
   </div>
@@ -121,7 +123,7 @@
   </div>
 </footer>
 
-{#if showBackToTop}
+{#if showBackToTop && !isNavOpen}
   <button class="back-to-top" on:click={scrollToTop} aria-label="Back to top">
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
       <path d="M18 15l-6-6-6 6"/>
@@ -147,9 +149,13 @@
     align-items: center;
     justify-content: center;
     transition: background 0.2s, transform 0.2s;
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+  }
+  .back-to-top:hover, .back-to-top:active, .back-to-top:focus {
+    background: var(--brand);
   }
   .back-to-top:hover {
-    background: var(--brand-dark);
     transform: translateY(-3px);
   }
   @media (max-width: 640px) {

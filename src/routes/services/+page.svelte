@@ -37,8 +37,8 @@
   <div class="section" style="grid-template-columns: 1fr;">
     <div>
       
-      <h1 style="font-size: clamp(2.5rem, 5vw, 4rem); line-height: 1.1; margin-bottom: 1rem;">MEP services from design to commissioning.</h1>
-      <p class="lead" style="font-size: clamp(1.15rem, 2vw, 1.5rem); line-height: 1.6;">
+      <h1>MEP services from design to commissioning.</h1>
+      <p class="lead">
         ASDA Engineering supports complete MEP delivery for commercial, healthcare,
         hospitality, government, institutional, and industrial environments.
       </p>

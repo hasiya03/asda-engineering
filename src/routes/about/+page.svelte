@@ -59,8 +59,8 @@
   <div class="section" style="grid-template-columns: 1fr;">
     <div>
       
-      <h1 style="font-size: clamp(2.5rem, 5vw, 4rem); line-height: 1.1; margin-bottom: 1rem;">Trusted MEP engineering since 2002.</h1>
-      <p class="lead" style="font-size: clamp(1.15rem, 2vw, 1.5rem); line-height: 1.6;">
+      <h1>Trusted MEP engineering since 2002.</h1>
+      <p class="lead">
         ASDA Engineering is a Sri Lankan mechanical, electrical, and plumbing
         engineering contractor serving state and private-sector construction
         projects with disciplined execution, trained teams, and long-term client
@@ -141,6 +141,25 @@
 
 <section class="section">
   <div class="section-header center">
+    <div>
+    
+      <h1>Industry recognized standards</h1>
+    </div>
+    <p class="lead">
+      ASDA Engineering's accreditations reinforce our commitment to professional
+      standards, quality management, and dependable project execution.
+    </p>
+  </div>
+  <div class="logo-strip accreditation-strip">
+    {#each accreditations as accreditation}
+      <div class="logo-tile accreditation-tile">
+        <img src={accreditation} alt="ASDA Engineering accreditation logo" />
+      </div>
+    {/each}
+  </div>
+</section>
+<section class="section">
+  <div class="section-header center">
     <h1>Our Expertise</h1>
     <!-- <p>
       ASDA Engineering is led by a multidisciplinary management team supporting
@@ -160,25 +179,6 @@
           {/if}
         </div>
       </article>
-    {/each}
-  </div>
-</section>
-<section class="section">
-  <div class="section-header center">
-    <div>
-    
-      <h1>Recognized credentials that support trusted engineering delivery.</h1>
-    </div>
-    <p style="font-size: clamp(1.15rem, 2vw, 1.5rem); line-height: 1.6;">
-      ASDA Engineering's accreditations reinforce our commitment to professional
-      standards, quality management, and dependable project execution.
-    </p>
-  </div>
-  <div class="logo-strip accreditation-strip">
-    {#each accreditations as accreditation}
-      <div class="logo-tile accreditation-tile">
-        <img src={accreditation} alt="ASDA Engineering accreditation logo" />
-      </div>
     {/each}
   </div>
 </section>

@@ -215,15 +215,8 @@
 </section>
 
 <section class="section">
-  <div class="section-header">
-    <div>
-   
-      <h2>Proven experience across Sri Lanka's critical built environments.</h2>
-    </div>
-    <p>
-      ASDA Engineering has delivered major hospitality, commercial, healthcare, government,
-      and institutional MEP works with significant plant capacity and technical scope.
-    </p>
+  <div class="section-header" style="display: block;">
+    <h2>Proven experience across Sri Lanka's critical built environments.</h2>
   </div>
 
   <div class="grid three">
@@ -283,12 +276,8 @@
 </section>
 
 <section class="section">
-  <div class="section-header">
-    <div>
-   
-      <h2>Complete MEP capability under one engineering partner.</h2>
-    </div>
-    
+  <div class="section-header" style="display: block;">
+    <h2>Complete MEP capability under one engineering partner.</h2>
   </div>
 
   <div class="grid three">

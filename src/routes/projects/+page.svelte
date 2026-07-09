@@ -85,8 +85,8 @@
   <div class="section" style="grid-template-columns: 1fr;">
     <div>
  
-      <h1 style="font-size: clamp(2.5rem, 5vw, 4rem); line-height: 1.1; margin-bottom: 1rem;">Portfolio of major MEP work across Sri Lanka.</h1>
-      <p class="lead" style="font-size: clamp(1.15rem, 2vw, 1.5rem); line-height: 1.6;">
+      <h1>Portfolio of major MEP work across Sri Lanka.</h1>
+      <p class="lead">
         Explore completed and ongoing projects across hospitality, commercial, healthcare,
         institutional, and specialist building environments.
       </p>
@@ -108,12 +108,9 @@
       {#each group.projects as project}
         <article class="project-card">
           {#if project[3]}
-            <iframe 
-              src={project[2]} 
-              title="Interactive VR"
-              allowfullscreen
-              style="width: 100%; aspect-ratio: 16 / 10; border: none; display: block;"
-            ></iframe>
+            <div style="width: 100%; aspect-ratio: 16 / 10; background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('/assets/project location image/moh.jpg') center/cover no-repeat; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 16px; padding: 20px; text-align: center;">
+              <a href={project[2]} target="_blank" rel="noopener noreferrer" class="button" style="padding: 0 16px; min-height: 40px; font-size: 0.9rem;">View 3D Tour (Full Screen)</a>
+            </div>
           {:else}
             <img src={project[2]} alt={project[0]} />
           {/if}
