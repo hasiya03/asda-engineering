@@ -2,7 +2,7 @@
   import { onMount } from 'svelte';
   import { tweened } from 'svelte/motion';
   import { cubicOut } from 'svelte/easing';
-  import { siteRevealed } from '../store.js';
+
 
   const services = [
     ['<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"/></svg>', 'MVAC Systems', 'Air conditioning, ventilation, chilled water systems, FCUs, and related mechanical services.'],
@@ -95,11 +95,11 @@
   const numEmployees = tweened(0, { duration: 2500, easing: cubicOut });
   const numTurnover = tweened(0, { duration: 2500, easing: cubicOut });
 
-  $: if ($siteRevealed) {
+  onMount(() => {
     numProjects.set(100);
     numEmployees.set(150);
     numTurnover.set(900);
-  }
+  });
 </script>
 
 <section class="relative flex flex-col items-center justify-center text-center min-h-[calc(100vh-116px)] px-5 py-24 overflow-hidden before:content-[''] before:absolute before:inset-0 before:bg-white/75 before:z-10 before:pointer-events-none">
